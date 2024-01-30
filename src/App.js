@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Auth } from "./pages/auth";
-import { home } from "./pages/home";
+import { Homepage } from "./pages/home-page";
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" exact element={< Auth />} />
-          <Route path="/home" element={< home />} />
+          <Route path="/home-page" element={< Homepage />} />
         </Routes>
       </Router>
 
