@@ -19,9 +19,10 @@ export const Auth = () => {
         navigate("/home-page");
     };
 
-    return (<div className='auth-page'>
-        <p>Login With Google Account</p>
-        <button className="google-login-button" onClick={signInWithGoogle}> {" "} Sign In With Google</button>
-    </div>
+    return (
+        <div className='auth-page'>
+            <p>Login With Google Account</p>
+            <button className="google-login-button" onClick={signInWithGoogle}> {" "} Sign In With Google</button>
+        </div>
     );
 };

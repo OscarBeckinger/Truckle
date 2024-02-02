@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Auth } from "./pages/auth";
 import { Homepage } from "./pages/home-page";
+
 function App() {
   return (
     <div className="App">
