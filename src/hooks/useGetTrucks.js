@@ -11,11 +11,12 @@ export const useGetTrucks = () => {
             const truckSnapshot = await getDocs(trucksCollectionRef);
             truckSnapshot.forEach(doc => {
                 const truckdata = doc.data();
-                const { description, imageurl, title } = truckdata;
+                const { description, imageurl, title, navStr } = truckdata;
                 const truckEntry = {
                     description,
                     imageurl,
                     title,
+                    navStr,
                 };
                 trucksArr.push(truckEntry);
             });
