@@ -1,25 +1,27 @@
 import { useGetUserInfo } from "../../../hooks/useGetUserInfo";
 import { useGetUserReviews } from "../../../hooks/useGetUserReviews";
 import { useState } from "react";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../../../config/firebase-config";
 
 export default function EditProfile() {
   const { name, profilePhoto, userID, isAuth, email } = useGetUserInfo();
+  console.log("hey")
   const { userReviews } = useGetUserReviews();
-  // const { userReviews, setUserReviews } = useGetUserReviews();
 
-  // const { userReviews } = useGetUserReviews();
-  // const [reviews, setReviews] = useState(userReviews);
-  
-  const handleDeleteReview = (index) => {
-    // Create a copy of userReviews array
-    const updatedReviews = [...userReviews];
-    
-    // Remove the element at the specified index
-    updatedReviews.splice(index, 1);
-    
-    // // Update the userReviews state with the modified array
-    // setUserReviews(updatedReviews);
-  };
+  const handleDeleteReview = async (index) => {
+    // Display a confirmation dialog
+    const confirmed = window.confirm("Are you sure you want to delete this review?");
+
+    // If the user confirms deletion, proceed with deletion
+    if (confirmed) {
+        deleteDoc(doc(db, "reviews", index));
+    } else {
+        // Do nothing if the user cancels
+        // alert("Deletion cancelled.");
+    }
+};
+
 
   return (
     <>
@@ -30,12 +32,11 @@ export default function EditProfile() {
           <h2 style={styles.userEmail}>Email: {email}</h2>
         </div>
       </div>
-
-      <h3 style={styles.reviewsHeading}>Your Reviews:</h3>
+      <h3 style={styles.reviewsHeading}>{userReviews.length > 0 ? "Your Reviews" : "No reviews"}</h3>
       <ul style={styles.reviewList}>
         {userReviews.map((review, index) => (
           <li key={index} style={styles.reviewItem}>
-            <button onClick={() => handleDeleteReview(index)} style={styles.deleteButton}>
+            <button onClick={() => handleDeleteReview(review.id)} style={styles.deleteButton}>
               &#x1F5D1; {/* Unicode for trash can icon */}
             </button>
             <div style={styles.reviewContent}>
