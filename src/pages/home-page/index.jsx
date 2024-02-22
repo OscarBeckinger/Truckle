@@ -13,7 +13,7 @@ export const Homepage = () => {
 
     return (
         <>
-        {/* <button className="accButton">Account Settings</button> */}
+    {/* is this proper way to do navigation? */}
         <nav> 
                     <Link to="/AccountSettings" className="accButton">Account Settings</Link>
         </nav>
