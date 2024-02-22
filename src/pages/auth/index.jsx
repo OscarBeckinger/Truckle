@@ -6,22 +6,27 @@ export const Auth = () => {
     const navigate = useNavigate();
 
     const signInWithGoogle = async () => {
-        const results = await signInWithPopup(auth, provider);
-        //console.log(results);
-        const authInfo = {
-            userID: results.user.uid,
-            name: results.user.displayName,
-            profilePhoto: results.user.photoURL,
-            isAuth: true,
-            // made change to also get user email just in case t
-            email: results.user.email,
-        };
-        console.log(results.user.email);
-        console.log(results.user.displayName)
-        localStorage.setItem("auth", JSON.stringify(authInfo));
-        navigate("/home-page");
-    };
+        try {
+            const results = await signInWithPopup(auth, provider);
 
+            const authInfo = {
+                userID: results.user.uid,
+                name: results.user.displayName,
+                profilePhoto: results.user.photoURL,
+                isAuth: true,
+                email: results.user.email,
+            };
+            console.log(results.user.email);
+            console.log(results.user.displayName)
+            localStorage.setItem("auth", JSON.stringify(authInfo));
+            navigate("/home-page");
+        } catch (error) {
+            if (error.code === 'auth/cancelled-popup-request') {
+                // User cancelled the sign-in process
+                console.log('User cancelled the sign-in process');
+            }
+        };
+    };
     return (
         <div className='auth-page'>
             <p>Login With Google Account</p>
