@@ -1,5 +1,7 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "./homepage.css";
+
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
     const navigate = useNavigate();
@@ -11,6 +13,10 @@ export const Homepage = () => {
 
     return (
         <>
+    {/* is this proper way to do navigation? */}
+        <nav> 
+                    <Link to="/AccountSettings" className="accButton">Account Settings</Link>
+        </nav>
             <div>Home Page1</div>
             <div className="truck-list-homepage">
                 <ul>

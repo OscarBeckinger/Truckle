@@ -13,8 +13,11 @@ export const Auth = () => {
             name: results.user.displayName,
             profilePhoto: results.user.photoURL,
             isAuth: true,
+            // made change to also get user email just in case t
+            email: results.user.email,
         };
-
+        console.log(results.user.email);
+        console.log(results.user.displayName)
         localStorage.setItem("auth", JSON.stringify(authInfo));
         navigate("/home-page");
     };
