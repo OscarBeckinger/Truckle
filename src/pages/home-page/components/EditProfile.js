@@ -1,11 +1,11 @@
 import { useGetUserInfo } from "../../../hooks/useGetUserInfo";
 import { useGetUserReviews } from "../../../hooks/useGetUserReviews";
-import { useState } from "react";
+//import { useState } from "react";
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../../config/firebase-config";
 
 export default function EditProfile() {
-  const { name, profilePhoto, userID, isAuth, email } = useGetUserInfo();
+  const { name, profilePhoto, email } = useGetUserInfo();
   console.log("hey")
   const { userReviews } = useGetUserReviews();
 
@@ -15,12 +15,12 @@ export default function EditProfile() {
 
     // If the user confirms deletion, proceed with deletion
     if (confirmed) {
-        deleteDoc(doc(db, "reviews", index));
+      deleteDoc(doc(db, "reviews", index));
     } else {
-        // Do nothing if the user cancels
-        // alert("Deletion cancelled.");
+      // Do nothing if the user cancels
+      // alert("Deletion cancelled.");
     }
-};
+  };
 
 
   return (
