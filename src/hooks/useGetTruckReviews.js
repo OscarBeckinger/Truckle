@@ -6,9 +6,8 @@ import { db } from "../config/firebase-config";
 export const useGetTruckReviews = (truckName) => {
     const [truckReviews, setTruckReviews] = useState([]);
     //const { userID } = useGetUserInfo(); (adding this makes other users profiles photos go away for some reason)
-
+    const reviewCollectionRef = collection(db, "reviews");
     useEffect(() => {
-        const reviewCollectionRef = collection(db, "reviews");
         const getTruckReviews = async () => {
             let unsubscribe;
             try {
