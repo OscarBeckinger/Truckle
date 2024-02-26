@@ -1,14 +1,11 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
 import "./homepage.css";
-
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
     const navigate = useNavigate();
-
-    //naviagtion test 
-    const handleClick = (navStr) => {
-        navigate(navStr);
+    const handleClick = (navStr, title) => {
+        navigate("/truckPage", {state: {title}});
     };
 
     return (
@@ -25,7 +22,7 @@ export const Homepage = () => {
                         return (
                             <div className="truck-list-item-div">
                                 <li>
-                                    <img src={imageurl} alt="food truck" height="200" width="200" onClick={() => handleClick(navStr)} />
+                                    <img src={imageurl} alt="food truck" height="200" width="200" onClick={() => handleClick(navStr, title)} />
                                     <h2>{title}</h2>
                                     <p>{description}</p>
                                 </li>
