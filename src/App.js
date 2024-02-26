@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Auth } from "./pages/auth";
 import { Homepage } from "./pages/home-page";
 import { ThaiE } from "./pages/trucks/Thai8E8";
+import { Perro } from "./pages/trucks/Thai8E8/Perro";
 import AccountSettings from "./pages/home-page/AccountSettings";
 
 
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" exact element={< Auth />} />
           <Route path="/home-page" element={< Homepage />} />
           <Route path="/Thai8E8" element={< ThaiE />} />
+          <Route path="/Perro" element={< Perro />} />
           <Route path="/AccountSettings" element={<AccountSettings />} /> {/* Add this route */}
         </Routes>
       </Router>
