@@ -1,5 +1,5 @@
 import React from 'react';
-import EditProfile from './components/EditProfile';
+import EditProfile from '../../components/EditProfile';
 
 // This is the Account Settings page, it displays eveyrthing related to you acc information:
 // name, email, all your reviews
