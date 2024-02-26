@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Auth } from "./pages/auth";
 import { Homepage } from "./pages/home-page";
 import { ThaiE } from "./pages/trucks/Thai8E8";
-import { Perro } from "./pages/trucks/Thai8E8/Perro";
+import { Perro } from "./pages/trucks/Perro";
 import AccountSettings from "./pages/home-page/AccountSettings";
 
 

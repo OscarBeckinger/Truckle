@@ -1,5 +1,5 @@
-import ReviewInputBox from "../../../../components/ReviewInputBox";
-import { useGetTruckReviews } from "../../../../hooks/useGetTruckReviews";
+import ReviewInputBox from "../../../components/ReviewInputBox";
+import { useGetTruckReviews } from "../../../hooks/useGetTruckReviews";
 export const Perro = () => {
     const reviews = useGetTruckReviews("Perro");
     return (
