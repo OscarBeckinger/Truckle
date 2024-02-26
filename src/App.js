@@ -3,7 +3,7 @@ import { Auth } from "./pages/auth";
 import { Homepage } from "./pages/home-page";
 import { ThaiE } from "./pages/trucks/Thai8E8";
 import { Perro } from "./pages/trucks/Perro";
-import AccountSettings from "./pages/home-page/AccountSettings";
+import AccountSettings from "./pages/account-settings/AccountSettings";
 
 
 

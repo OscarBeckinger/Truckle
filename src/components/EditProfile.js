@@ -1,8 +1,8 @@
-import { useGetUserInfo } from "../../../hooks/useGetUserInfo";
-import { useGetUserReviews } from "../../../hooks/useGetUserReviews";
+import { useGetUserInfo } from "../hooks/useGetUserInfo";
+import { useGetUserReviews } from "../hooks/useGetUserReviews";
 //import { useState } from "react";
 import { doc, deleteDoc } from "firebase/firestore";
-import { db } from "../../../config/firebase-config";
+import { db } from "../config/firebase-config";
 
 export default function EditProfile() {
   const { name, profilePhoto, email } = useGetUserInfo();
