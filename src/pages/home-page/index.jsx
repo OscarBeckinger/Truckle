@@ -1,14 +1,12 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
 import "./homepage.css";
-
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
     const navigate = useNavigate();
-
-    //naviagtion test 
-    const handleClick = (navStr) => {
-        navigate(navStr);
+    const handleClick = (navstr) => {
+        // state object can contain any data you want to pass to the destination page.
+        navigate(navstr);
     };
 
     return (
@@ -21,7 +19,7 @@ export const Homepage = () => {
             <div className="truck-list-homepage">
                 <ul>
                     {trucks.map((truck) => {
-                        const { description, imageurl, title, navStr } = truck;
+                        const { description, imageurl, title, navStr} = truck;
                         return (
                             <div className="truck-list-item-div">
                                 <li>
