@@ -1,0 +1,39 @@
+/* login.css */
+
+body {
+    font-family: Georgia, serif; /* Set body font to Georgia */
+    font-size: 12px; /* Set body font size to 12 */
+}
+
+.auth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust as needed */
+
+    background: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%); /* blue ombre background */
+}
+
+.google-login-button {
+    background-color: #ffffff; /* Button background color */
+    color: #333333; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Button font size */
+    font-family: 'Merriweather', serif;
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    outline: none; /* Remove button outline */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+}
+
+.google-login-button:hover {
+    background-color: #e0e0e0; /* Change button background color on hover */
+}
+
+.auth-page p {
+    color: #ffffff; /* Text color */
+    font-size: 18px; /* Font size */
+    margin-bottom: 20px; /* Bottom margin */
+}
