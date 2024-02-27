@@ -1,6 +1,7 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
-import MenuItems from "../../components/MenuItems";
+import CombinedMenuItems from "../../components/CombinedMenuItems";
+
 import "./homepage.css";
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
@@ -33,7 +34,9 @@ export const Homepage = () => {
                     })}
                 </ul>
             </div>
-            <MenuItems assocTruck={"None"}></MenuItems>
+            {/*<MenuItems assocTruck={"None"}></MenuItems>*/}
+            <h1>Menu Items</h1>
+            <CombinedMenuItems assocTruck={"None"}></CombinedMenuItems>
         </>
     );
 };

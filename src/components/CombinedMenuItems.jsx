@@ -1,15 +1,18 @@
-import { useGetTruckMenuItems } from "../hooks/useGetTruckMenuItems.js";
-const TruckMenuItems = ({ assocTruck }) => {
-    const items = useGetTruckMenuItems(assocTruck);
+import React from "react";
+import { useGetMenuItemsCombined } from "../hooks/useGetMenuItems";
+
+const CombinedMenuItems = ({ assocTruck }) => {
+    const items = useGetMenuItemsCombined(assocTruck);
+
     return (
         <>
             <div>Menu Items</div>
             <div>
                 <ul>
-                    {items.map((item) => {
-                        const { associatedTruck, description, imageurl, title, } = item;
+                    {items.map((item, index) => {
+                        const { associatedTruck, description, imageurl, title } = item;
                         return (
-                            <div>
+                            <div key={index}>
                                 <li>
                                     <img src={imageurl} alt="menu item" height="100" width="100" />
                                     <h2>{title}</h2>
@@ -21,9 +24,8 @@ const TruckMenuItems = ({ assocTruck }) => {
                     })}
                 </ul>
             </div>
-
         </>
     );
+};
 
-}
-export default TruckMenuItems;
+export default CombinedMenuItems;
