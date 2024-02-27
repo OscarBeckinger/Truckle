@@ -1,5 +1,6 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
+import MenuItems from "../../components/MenuItems";
 import "./homepage.css";
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
@@ -11,15 +12,15 @@ export const Homepage = () => {
 
     return (
         <>
-    {/* is this proper way to do navigation? */}
-        <nav> 
-                    <Link to="/AccountSettings" className="accButton">Account Settings</Link>
-        </nav>
+            {/* is this proper way to do navigation? */}
+            <nav>
+                <Link to="/AccountSettings" className="accButton">Account Settings</Link>
+            </nav>
             <div>Home Page1</div>
             <div className="truck-list-homepage">
                 <ul>
                     {trucks.map((truck) => {
-                        const { description, imageurl, title, navStr} = truck;
+                        const { description, imageurl, title, navStr } = truck;
                         return (
                             <div className="truck-list-item-div">
                                 <li>
@@ -32,6 +33,7 @@ export const Homepage = () => {
                     })}
                 </ul>
             </div>
+            <MenuItems assocTruck={"None"}></MenuItems>
         </>
     );
 };
