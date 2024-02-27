@@ -1,11 +1,12 @@
-import ReviewInputBox from "../../../components/ReviewInputBox";
-import { useGetTruckReviews } from "../../../hooks/useGetTruckReviews";
-export const Perro = () => {
-    const reviews = useGetTruckReviews("Perro");
+import ReviewInputBox from "../../components/ReviewInputBox";
+import { useGetTruckReviews } from "../../hooks/useGetTruckReviews";
+export const TruckPage = (truckName) => {
+    const reviews = useGetTruckReviews(truckName);
+    
     return (
         <>
-            <h1>Perro</h1>
-            <ReviewInputBox associatedTruck={'Perro'}></ReviewInputBox>
+            <h1>{truckName}</h1>
+            <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>
             <h2>Reviews: </h2>
             <p>Review Count: {reviews.length}</p>
             <div className="reviews">

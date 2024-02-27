@@ -4,8 +4,9 @@ import "./homepage.css";
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
     const navigate = useNavigate();
-    const handleClick = (navStr, title) => {
-        navigate("/truckPage", {state: {title}});
+    const handleClick = (navstr) => {
+        // state object can contain any data you want to pass to the destination page.
+        navigate(navstr);
     };
 
     return (
@@ -18,11 +19,11 @@ export const Homepage = () => {
             <div className="truck-list-homepage">
                 <ul>
                     {trucks.map((truck) => {
-                        const { description, imageurl, title, navStr } = truck;
+                        const { description, imageurl, title, navStr} = truck;
                         return (
                             <div className="truck-list-item-div">
                                 <li>
-                                    <img src={imageurl} alt="food truck" height="200" width="200" onClick={() => handleClick(navStr, title)} />
+                                    <img src={imageurl} alt="food truck" height="200" width="200" onClick={() => handleClick(navStr)} />
                                     <h2>{title}</h2>
                                     <p>{description}</p>
                                 </li>
