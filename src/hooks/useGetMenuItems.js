@@ -1,36 +1,61 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { query, collection, where, onSnapshot, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase-config";
 
-//
-export const useGetMenuItems = () => {
+export const useGetMenuItemsCombined = (truckName) => {
     const [menuItems, setMenuItems] = useState([]);
+
     useEffect(() => {
-        const menuCollectionRef = collection(db, "menuitems");
         const getMenuItems = async () => {
             try {
                 let menuArr = [];
-                const menuSnapshot = await getDocs(menuCollectionRef);
-                menuSnapshot.forEach(doc => {
-                    const menudata = doc.data();
-                    const { associatedTruck, imageurl, description, title } = menudata;
-                    const menuEntry = {
-                        associatedTruck,
-                        description,
-                        imageurl,
-                        title,
-                    };
-                    menuArr.push(menuEntry);
-                });
+                let menuCollectionRef;
+
+                if (truckName === "None") {
+                    menuCollectionRef = collection(db, "menuitems");
+                    const menuSnapshot = await getDocs(menuCollectionRef);
+                    menuSnapshot.forEach(doc => {
+                        const menudata = doc.data();
+                        const { associatedTruck, imageurl, description, title } = menudata;
+                        const menuEntry = {
+                            associatedTruck,
+                            description,
+                            imageurl,
+                            title,
+                        };
+                        menuArr.push(menuEntry);
+                    });
+                } else {
+                    menuCollectionRef = collection(db, "menuitems");
+                    const queryMenuItems = query(menuCollectionRef, where("associatedTruck", "==", truckName));
+                    const unsubscribe = onSnapshot(queryMenuItems, (snapshot) => {
+                        snapshot.forEach((doc) => {
+                            const menudata = doc.data();
+                            const { associatedTruck, imageurl, description, title } = menudata;
+                            const menuEntry = {
+                                associatedTruck,
+                                description,
+                                imageurl,
+                                title,
+                            };
+                            menuArr.push(menuEntry);
+                        });
+                        setMenuItems(menuArr);
+                    });
+
+                    return () => unsubscribe();
+                }
+
                 setMenuItems(menuArr);
-            } catch (err) {
-                console.error(err);
+            } catch (error) {
+                console.error(error);
             }
         };
+
         getMenuItems();
 
-        return () => { };
-    }, []);
-    console.log("MENU ITEMS: ", menuItems)
+        return () => { }; // cleanup function
+    }, [truckName]);
+
     return menuItems;
 };
