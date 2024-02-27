@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { query, collection, where, orderBy, onSnapshot } from "firebase/firestore";
+import { query, collection, where, onSnapshot } from "firebase/firestore";
 import { db } from "../config/firebase-config";
 
 export const useGetTruckMenuItems = (truckName) => {
@@ -15,7 +15,6 @@ export const useGetTruckMenuItems = (truckName) => {
                     let menuArr = [];
                     snapshot.forEach((doc) => {
                         const menudata = doc.data();
-                        console.log("Menu data:", menudata); // Add this line for debugging
                         const { associatedTruck, imageurl, description, title } = menudata;
                         const menuEntry = {
                             associatedTruck,

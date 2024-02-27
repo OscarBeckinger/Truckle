@@ -1,8 +1,6 @@
 import { useGetTruckMenuItems } from "../hooks/useGetTruckMenuItems.js";
 const TruckMenuItems = ({ assocTruck }) => {
     const items = useGetTruckMenuItems(assocTruck);
-    console.log("COMPONENT ITEMS: ", items);
-    //console.log("Assoc Truck: ", assocTruck);
     return (
         <>
             <div>Menu Items</div>
