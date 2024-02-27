@@ -1,8 +1,12 @@
 import ReviewInputBox from "../../components/ReviewInputBox";
+import TruckMenuItems from "../../components/TruckMenuItems";
 import { useGetTruckReviews } from "../../hooks/useGetTruckReviews";
+import { useGetTruckMenuItems } from "../../hooks/useGetTruckMenuItems";
 export const TruckPage = (truckName) => {
     const reviews = useGetTruckReviews(truckName);
-    
+    const items = useGetTruckMenuItems(truckName);
+    console.log("ITEMS: ", items);
+
     return (
         <>
             <h1>{truckName}</h1>
@@ -29,7 +33,8 @@ export const TruckPage = (truckName) => {
                     })}
                 </ul>
             </div>
+            <h1>truck name: {truckName}</h1>
+            <TruckMenuItems assocTruck={truckName}></TruckMenuItems>
         </>
     );
-
 };
