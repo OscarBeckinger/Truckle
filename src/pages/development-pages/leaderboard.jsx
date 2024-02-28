@@ -1,5 +1,5 @@
 import Board from "./board";
-import './style.css'
+import './style.css';
 export default function Leaderboard(){
       return(
             <div className="App" id='main'> 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Leaderboard } from './database';
-import Profiles from "./projiles"
+import Profiles from "./projiles";
 import { useGetTrucksLeaderboard } from './useGetTruckLeaderbord';
 import { useNavigate } from 'react-router-dom';
 
