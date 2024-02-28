@@ -2,7 +2,6 @@ import { db } from "../../config/firebase-config";
 import { useState, useEffect } from "react";
 import { collection, getDocs, query, where } from 'firebase/firestore';
 
-
 export const useGetTrucksLeaderboard = () => {
       const trucksCollectionRef = collection(db, "foodtrucks");
       const [trucks, setTrucks] = useState([]);

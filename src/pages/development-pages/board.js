@@ -14,7 +14,7 @@ function Board() {
     return (
         <div>
             <div className='board'>
-                <h1 className='leaderboard'>LeaderBoard</h1>
+                <h1 className='leaderboard'> UCLA Food Truck LeaderBoard</h1>
                 <div className='duration'>
                     <button onClick={() => handleClick("/AboutRanking")}>How do we Rank?</button>
                 </div>

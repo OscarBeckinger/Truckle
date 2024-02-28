@@ -1,7 +1,6 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
 import CombinedMenuItems from "../../components/CombinedMenuItems";
-
 import "./homepage.css";
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
@@ -18,7 +17,6 @@ export const Homepage = () => {
                 <Link to="/AccountSettings" className="accButton">Account Settings</Link>
                 <Link to="/LeaderBoard" >LeaderBoard</Link>
             </nav>
-            <div>Home Page1</div>
             <div className="truck-list-homepage">
                 <ul>
                     {trucks.map((truck) => {

@@ -23,7 +23,7 @@ function Item(data){
                             </div>                
                         </div>
                         <div className="item">
-                            <span>{value.reviewCount}</span>
+                            <span>Score: {value.reviewCount}</span>
                         </div>
                     </div>
                     )
