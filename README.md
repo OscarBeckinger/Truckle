@@ -14,7 +14,6 @@ npm install
 Or if your prefer yarn:
 ```
 yarn install
-
 ```
 2. Run the development server:
 
