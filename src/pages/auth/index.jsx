@@ -17,14 +17,14 @@ export const Auth = () => {
                 isAuth: true,
                 email: results.user.email,
             };
-            console.log(results.user.email);
-            console.log(results.user.displayName)
+            // console.log(results.user.email);
+            // console.log(results.user.displayName)
             localStorage.setItem("auth", JSON.stringify(authInfo));
             navigate("/home-page");
         } catch (error) {
             if (error.code === 'auth/cancelled-popup-request') {
                 // User cancelled the sign-in process
-                console.log('User cancelled the sign-in process');
+                // console.log('User cancelled the sign-in process');
             }
         };
     };
