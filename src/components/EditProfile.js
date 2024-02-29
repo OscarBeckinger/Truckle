@@ -6,7 +6,6 @@ import { db } from "../config/firebase-config";
 
 export default function EditProfile() {
   const { name, profilePhoto, email } = useGetUserInfo();
-  console.log("hey")
   const { userReviews } = useGetUserReviews();
 
   const handleDeleteReview = async (index) => {
