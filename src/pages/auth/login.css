@@ -1,17 +1,31 @@
 /* login.css */
 
-body {
+/* body {
+    margin: 0;
+    font-family: Georgia, serif; /* Set body font to Georgia */
+    /* font-size: 12px; Set body font size to 12 */
+/* } */
+
+html {
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  body {
+    overflow: auto;
+    height: 100%;
+    overscroll-behavior: none;
+    margin: 0;
     font-family: Georgia, serif; /* Set body font to Georgia */
     font-size: 12px; /* Set body font size to 12 */
-}
+  }
 
 .auth-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Adjust as needed */
-
+    height: 100vh; 
     background: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%); /* blue ombre background */
 }
 
