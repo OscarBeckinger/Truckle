@@ -1,5 +1,6 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
+
 import "./homepage.css";
 
 export const Homepage = () => {
@@ -22,9 +23,11 @@ export const Homepage = () => {
                 <div className="pageTitle">Home</div>
                 <div className="foodTruckList">
                     {trucks.map((truck, index) => {
+
             <div className="truck-list-homepage">
                 <ul>
                     {trucks.map((truck) => {
+
                         const { description, imageurl, title, navStr } = truck;
                         return (
                             <div className="foodTruckItem" key={index} onClick={() => handleClick(navStr)}>
@@ -32,6 +35,7 @@ export const Homepage = () => {
                                  <h2 className="truckTitle">{title}</h2>
                                 <p>{description}</p>
                             </div>
+                            // hello world
                         );
                     })}
                 </div>
