@@ -28,6 +28,7 @@ export const Homepage = () => {
                                  <h2 className="truckTitle">{title}</h2>
                                 <p>{description}</p>
                             </div>
+                            // hello world
                         );
                     })}
                 </div>
