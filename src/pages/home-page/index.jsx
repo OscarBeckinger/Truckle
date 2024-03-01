@@ -1,7 +1,7 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
-import CombinedMenuItems from "../../components/CombinedMenuItems";
 import "./homepage.css";
+
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
     const navigate = useNavigate();
@@ -17,25 +17,25 @@ export const Homepage = () => {
                 <Link to="/AccountSettings" className="accButton">Account Settings</Link>
                 <Link to="/LeaderBoard" >LeaderBoard</Link>
             </nav>
+
+            <div className="homepage">
+                <div className="pageTitle">Home</div>
+                <div className="foodTruckList">
+                    {trucks.map((truck, index) => {
             <div className="truck-list-homepage">
                 <ul>
                     {trucks.map((truck) => {
                         const { description, imageurl, title, navStr } = truck;
                         return (
-                            <div className="truck-list-item-div">
-                                <li>
-                                    <img src={imageurl} alt="food truck" height="200" width="200" onClick={() => handleClick(navStr)} />
-                                    <h2>{title}</h2>
-                                    <p>{description}</p>
-                                </li>
+                            <div className="foodTruckItem" key={index} onClick={() => handleClick(navStr)}>
+                                <div style={{ backgroundImage: `url(${imageurl})` }}></div>
+                                 <h2 className="truckTitle">{title}</h2>
+                                <p>{description}</p>
                             </div>
                         );
                     })}
-                </ul>
+                </div>
             </div>
-            {/*<MenuItems assocTruck={"None"}></MenuItems>*/}
-            <h1>Menu Items</h1>
-            <CombinedMenuItems assocTruck={"None"}></CombinedMenuItems>
         </>
     );
 };
