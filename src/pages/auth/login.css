@@ -40,6 +40,7 @@ html {
     cursor: pointer; /* Change cursor to pointer on hover */
     outline: none; /* Remove button outline */
     transition: background-color 0.3s ease; /* Add smooth transition */
+    z-index: 1;
 }
 
 .google-login-button:hover {
@@ -61,6 +62,7 @@ html {
     100% { transform: translate(-3px, -3px); }
   }
 
+  /* shake diagonally from the other side */
 @keyframes shake-other {
   
     0% { transform: translate(3px, -3px); }
