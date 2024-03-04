@@ -17,6 +17,6 @@ const index = client.initIndex(ALGOLIA_INDEX_NAME);
 exports.removeItemFromIndex = functions.firestore
     .document("menuitems/{itemId}")
     .onDelete((snap, context) => {
-        const itemId = context.params.itemId;
+        const itemId = snap.id;
         return index.deleteObject(itemId);
     });

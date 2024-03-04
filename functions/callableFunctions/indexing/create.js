@@ -18,7 +18,7 @@ exports.indexItems = functions.firestore
     .document("menuitems/{itemId}")
     .onCreate((snap, context) => {
         const item = {
-            objectID: context.params.itemId,
+            objectID: snap.id,
             title: snap.data().title,
             description: snap.data().description,
             associatedTruck: snap.data().associatedTruck,
