@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "truckle-3ef9f"
+  },
+  "packageManager": "yarn"
+}
