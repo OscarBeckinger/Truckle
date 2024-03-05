@@ -1,63 +1,62 @@
 .homepage {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.homepage .pageTitle {
-    font-family: cursive;
-    font-size: 60px;
-    margin-left: 20px;
-}
-
-.foodTruckList {
-  width: 70vw;
+  width: 100%;
   height: auto;
   display: flex;
-  flex-wrap : wrap;
-  justify-content: space-around;
-  padding-top: 200px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.foodTruckList {
+ 
+width: 70vw;
+height: auto;
+display: flex;
+flex-wrap : wrap;
+justify-content: space-around;
+padding-top: 700px;
 }
 
 /* FOOD TRUCK ITEM STYLING */
 
 .foodTruckItem {
-  border-radius: 15px;
-  width: 300px;
-  height: auto;
-  margin: 10px;
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  align-items: left;
+
+border-radius: 15px;
+width: 300px;
+height: auto;
+margin: 10px;
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+display: flex;
+flex-direction: column;
+align-items: left;
 }
 
 .truckTitle {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .foodTruckItem:hover {
-  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease-in;
-  cursor: pointer;
+box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+transition: 0.3s ease-in;
+cursor: pointer;
 }
 
 .foodTruckItem div {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+width: 100%;
+height: 200px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 .foodTruckItem h2 {
-    margin: 10px 20px;
-    text-align: left;
+  margin: 10px 20px;
+  text-align: left;
 }
 
 .foodTruckItem p {
@@ -71,21 +70,87 @@ white-space: nowrap;
 }
 
 @media only screen and (max-width: 1300px) {
-  .foodTruckList {
-    grid-template-columns: 1fr 1fr;
-  }
+.foodTruckList {
+  grid-template-columns: 1fr 1fr;
+}
 }
 
 @media only screen and (max-width: 800px) {
-  .foodTruckList {
-    grid-template-columns: 1fr;
-  }
+.foodTruckList {
+  grid-template-columns: 1fr;
+}
 }
 
 .accButton {
-      position: absolute;
-      top: 10px; /* Adjust this value to adjust the distance from the top */
-      right: 10px; /* Adjust this value to adjust the distance from the right */
+    position: absolute;
+    top: 10px; /* Adjust this value to adjust the distance from the top */
+    right: 10px; /* Adjust this value to adjust the distance from the right */
+}
+
+
+  .truckle-home {
+    position: fixed;
+    top: 3%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+   
+  }
+  
+  .home {
+    position: fixed;
+    width: 450px;
+    height: auto;
+    
   }
 
+  .background-top
+ {
+
+
+   position: fixed;
+   width: 100%;
+   height: 50%;
+   z-index: -1;
+   top: 0;
+   background: linear-gradient( #93dfec 0%, #0078b7 100%);
+ }
+
+
+ .background-bottom
+ {
+
+
+   position: fixed;
+   width: 100%;
+   height: 50%;
+   z-index: -1;
+   bottom: 0;
+   background: #FFFFFF;
+ }
+
+
+ .move-truck {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  padding: 700px;
+ 
+ 
+ }
+ 
+ 
+ .move {
   
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: auto;
+  animation: moveTruck 10s linear infinite;
+ }
+ 
+ 
+ @keyframes moveTruck {
+  from {left: -100px;}
+  to {left: calc(100% + 100px); }
+ }
