@@ -10,6 +10,7 @@ import tacoImage from '../../taco.png';
 import { auth, provider } from '../../config/firebase-config';
 import { signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import logo from "../../TruckleImage.png"
 
 
 export const Auth = () => {
@@ -41,6 +42,12 @@ export const Auth = () => {
         <div className='auth-page'>
             <p>Login With Google Account</p>
             <button className="google-login-button" onClick={signInWithGoogle}>Sign In With Google</button>
+            
+            <div className="truckle-logo">
+               <img src = {logo} className ="logo"/>
+
+
+           </div>
             
             <div className="acaiBowl">
                 <img src = {acaiBowlImage} alt= "acai-bowl" className="images-d"/>
