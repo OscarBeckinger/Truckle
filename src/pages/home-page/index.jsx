@@ -1,6 +1,6 @@
 import { useGetTrucks } from "../../hooks/useGetTrucks";
 import { useNavigate, Link } from "react-router-dom";
-import home from "../../TruckleImageSmall.png"
+import home from "../../TrucklyImageSmall.png"
 import move from "../../movingTruck.png" 
 // import CombinedMenuItems from "../../components/CombinedMenuItems";
 import "./homepage.css";

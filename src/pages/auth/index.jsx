@@ -1,5 +1,5 @@
 import './login.css';
-import logo from "../../TrucklyImage.png"
+import logo from "../../TruckleImage.png"
 import { auth, provider } from '../../config/firebase-config'
 import { signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
