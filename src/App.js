@@ -19,6 +19,9 @@ function App() {
           <Route path="/Perro" element={TruckPage('Perro')} />
           <Route path="/Salpicon" element={TruckPage('Salpicon')} />
           <Route path="/8E8 Thai" element={TruckPage('8E8 Thai')} />
+          <Route path="/CerdaVega" element={TruckPage('Cerda Vega Tacos')} />
+          <Route path="/StopBye" element={TruckPage('StopBye Cafe')} />
+          <Route path="/SmileHotdog" element={TruckPage('Smile Hotdog')} />
           <Route path="/AccountSettings" element={<AccountSettings />} /> {/* Add this route */}
           <Route path="/LeaderBoard" element={<LeaderBoard />} /> {/* Add this route */}
           <Route path="/AboutRanking" element={<AboutRanking />} /> {/* Add this route */}
