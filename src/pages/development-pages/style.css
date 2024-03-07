@@ -19,11 +19,14 @@
 
 .board {
     text-align: center;
+    margin-top: calc(10vh - 65%); /* Adjust the top margin to start from -60% below the top of the viewport */
+    margin-bottom: calc(10vh - 20%);/* Adjust the bottom margin to start from -20% above the bottom of the viewport */
 }
 
 .board .leaderboard {
     padding-top: 200px;
     margin-bottom: 1em;
+    z-index: 2147483647;
 }
 
 .board .duration {
@@ -72,6 +75,7 @@
 #profile .flex img {
     width: 20%;
     border-radius: 50%;
+    z-index: 2147483647;
 }
 
 #profile .flex .info {
@@ -84,24 +88,26 @@
 
 .trophy-image {
     position: absolute;
-    top: 50%;
+    top:28%;
+    bottom: 100%;
+    right: 40%;
     left: 20%;
-    transform: translate(-50%, -50%)
- }
+   transform: translate(-50%, -50%);
+}
  
- .trophy {
-    width: 400px;
+.trophy {
+    width: 90%;
     height: auto;
- }
+}
 
- .leaderboard-header {
+.leaderboard-header {
     position: absolute;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 9999; /* Ensure the header is above other content */
+    z-index: 2147483647; /* Ensure the header is above other content */
     font-size: 18px; /* Button font size */
- }
+}
 
 .rank-button {
     background-color: #ffffff; /* Button background color */
@@ -119,7 +125,6 @@
     transform: translate (-50%,0%);
     z-index: 2147483647;
 }
-
 
 .background {
     display: flex;
