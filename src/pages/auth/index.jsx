@@ -1,4 +1,4 @@
-import './login.css';
+import './auth.css';
 import acaiBowlImage from '../auth/assets/acaibowl.png';
 import burgerImage from '../auth/assets/burger.png';
 import bulgogiRiceImage from '../auth/assets/bulgogirice.png';
@@ -10,7 +10,7 @@ import tacoImage from '../auth/assets/taco.png';
 import { auth, provider } from '../../config/firebase-config';
 import { signInWithPopup } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import logo from "../../TruckleImage.png"
+import logo from '../auth/assets/TruckleImage.png';
 
 
 export const Auth = () => {
