@@ -16,7 +16,7 @@ const CombinedMenuItems = ({ assocTruck }) => {
                                 <li>
                                     <img src={imageurl} alt="menu item" height="100" width="100" />
                                     <h2>{title}</h2>
-                                    <h4>{associatedTruck}</h4>
+                                    
                                     <p>{description}</p>
                                 </li>
                             </div>
