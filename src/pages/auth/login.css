@@ -27,11 +27,10 @@ body {
     cursor: pointer; /* Change cursor to pointer on hover */
     outline: none; /* Remove button outline */
     transition: background-color 0.3s ease; /* Add smooth transition */
-    position: absolute; 
-    bottom: 10%;
-    left: 45%;
-    transform: translate (-50%,50%);
-
+    position: relative; 
+    bottom: -35%;
+    left: 0%;
+    transform: translate (-50%,0%);
     z-index: 2147483647;
 }
 
@@ -43,9 +42,9 @@ body {
     color: #ffffff; /* Text color */
     font-size: 18px; /* Font size */
     margin-bottom: 20px; /* Bottom margin */
-    position: absolute; 
-    bottom: 15%;
-    left: 43%;
+    position: relative; 
+    bottom: -35%;
+    left: 0%;
     transform: translate (-50%,50%);
 
 }
@@ -57,18 +56,18 @@ body {
     50% { transform: translate(-3px, -3px); }
     75% { transform: translate(3px, 3px); }
     100% { transform: translate(-3px, -3px); }
-  }
-
+}
+/*animation to shake diagonally in the other way*/
 @keyframes shake-other {
   
     0% { transform: translate(3px, -3px); }
-  25% { transform: translate(-3px, 3px); }
-  50% { transform: translate(3px, -3px); }
-  75% { transform: translate(-3px, 3px); }
-  100% { transform: translate(3px, -3px); }
-  }
+    25% { transform: translate(-3px, 3px); }
+    50% { transform: translate(3px, -3px); }
+    75% { transform: translate(-3px, 3px); }
+    100% { transform: translate(3px, -3px); }
+}
 
-  .images-d {
+.images-d {
     width: 20%;
     height: auto;
 }
@@ -76,64 +75,65 @@ body {
 /*individual food classes */
 .acaiBowl {
     position: absolute;
-    top: 0%;
-    left: -1%;
+    top: 0px;
+    left: -1px;
     /*transform: translate(-35%, -55%);*/
     animation: shake 1.3s ease infinite;
 }
 
 .burger {
     position: absolute;
-    bottom: 5%;
-    right: -40%;
+    bottom: 5px;
+    right: -550px;
     /*transform: translate(-35%, -55%);*/
     animation: shake 1.3s ease infinite;
 }
 
 .bulgogiRice {
     position: absolute;
-    bottom: 28%;
-    right: -53%;
+    bottom: 170px;
+    right: -730px;
     /*transform: translate(-35%, -55%);*/
     animation: shake-other 1.3s ease infinite;
 }
 
 .donuts {
     position: absolute;
-    top: 25%;
-    left: 15%;
+    top: 170px;
+    left: 200px;
     /*transform: translate(-35%, -55%);*/
     animation: shake 1.3s ease infinite;
 }
 
 .iceCream {
     position: absolute;
-    bottom: 5%;
-    left: 18%;
+    bottom: 55px;
+    left: 270px;
     /*transform: translate(-35%, -55%);*/
     animation: shake-other 1.3s ease infinite;
 }
 
 .mangoRice {
     position: absolute;
-    bottom: 30%;
-    left: 4%;
+    bottom: 200px;
+    left: 60px;
     /*transform: translate(-35%, -55%);*/
     animation: shake 1.3s ease infinite;
 }
 
 .mangoSmoothie {
     position: absolute;
-    top: 5%;
-    right: -58%;
+    top: 5px;
+    bottom: 0px;
+    right: -800px;
     /*transform: translate(-35%, -55%);*/
     animation: shake-other 1.3s ease infinite;
 }
 
 .taco {
     position: absolute;
-    top: 20%;
-    right: -43%;
+    top: 180px;
+    right: -620px;
     /*transform: translate(-35%, -55%);*/
     animation: shake 1.3s ease infinite;
 }
@@ -142,11 +142,11 @@ body {
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
  }
  
  .logo{
-    width: 700px;
+    max-width: 500px;
     height: auto;
  }
  
