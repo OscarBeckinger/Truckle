@@ -1,14 +1,10 @@
-import { useGetTrucks } from "../../hooks/useGetTrucks";
-import { useNavigate, Link } from "react-router-dom";
-import home from "../../TrucklyImageSmall.png"
-import move from "../../movingTruck.png" 
-// import CombinedMenuItems from "../../components/CombinedMenuItems";
-import "./homepage.css";
+import { useGetTrucks } from '../../hooks/useGetTrucks';
+import { useNavigate, Link } from 'react-router-dom';
+import home from '../home-page/assets/TrucklyImageSmall.png';
+import move from '../home-page/assets/movingTruck.png';
+// import CombinedMenuItems from '../../components/CombinedMenuItems';
+import './homepage.css';
 
-
-
-
- 
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
     const navigate = useNavigate();
