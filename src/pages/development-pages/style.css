@@ -1,37 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * > * {
-    font-family: "Poppins", cursive;
+    font-family: 'Merriweather', serif;
     margin: 0;
 }
 
-:root{
+:root {
     --color-dark: #2C3131;
     --color-light: #F3F3F2;
 }
 
-#main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .board {
     text-align: center;
 }
 
-.board .leaderboard{
+.board .leaderboard {
+    padding-top: 200px;
     margin-bottom: 1em;
 }
 
-.board .duration{
+.board .duration {
     display: flex;
     justify-content: center;
     gap: 1em;
 }
 
-.board .duration > button{
+.board .duration > button {
     border: 1px solid var(--color-light);
     padding: .5em 2em;
     border-radius: 50px;
@@ -39,23 +40,23 @@
     cursor: pointer;
 }
 
-.board .duration > button:hover{
+.board .duration > button:hover {
     background-color: var(--color-dark);
     color: var(--color-light);
 }
 
-.active{
+.active {
     background-color: var(--color-dark);
     color: var(--color-light);
 }
 
-#profile{
+#profile {
     /* display: flex; */
 
     margin-top: 3em;
 }
 
-#profile .flex{
+#profile .flex {
     display: flex;
     justify-content: space-between;
     gap: 1em;
@@ -63,37 +64,68 @@
     margin-bottom: 2em;
 }
 
-#profile .flex .item{
+#profile .flex .item {
     display: flex;
     align-items: center;
 }
 
-#profile .flex img{
+#profile .flex img {
     width: 20%;
     border-radius: 50%;
 }
 
-#profile .flex .info{
+#profile .flex .info {
    padding: 1em;
 }
 
-.text-dark{
+.text-dark {
     color: var(--color-dark);
 }
 
-
 .trophy-image {
-  
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 20%;
     transform: translate(-50%, -50%)
- 
- 
  }
  
- 
- .trophy{
+ .trophy {
     width: 400px;
     height: auto;
  }
+
+ .leaderboard-header {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* Ensure the header is above other content */
+    font-size: 18px; /* Button font size */
+ }
+
+.rank-button {
+    background-color: #ffffff; /* Button background color */
+    color: #333333; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Button font size */
+    font-family: 'Merriweather', serif;
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    outline: none; /* Remove button outline */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+    bottom: -35%;
+    left: 0%;
+    transform: translate (-50%,0%);
+    z-index: 2147483647;
+}
+
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%); /* blue ombre background */
+}
