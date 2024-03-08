@@ -4,6 +4,7 @@ import { useGetTruckReviews } from "../../hooks/useGetTruckReviews";
 import Reviews from "../../components/Reviews";
 export const TruckPage = (truckName) => {
     const reviews = useGetTruckReviews(truckName);
+    // this has the code where the menu item page is contained and everything 
     return (
         <>
             <h1>{truckName}</h1>
