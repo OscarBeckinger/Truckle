@@ -11,7 +11,6 @@ export const Homepage = () => {
     const handleClick = (navstr) => {
         // state object can contain any data you want to pass to the destination page.
         navigate(navstr);
-    
     };
 
     return (
@@ -21,21 +20,13 @@ export const Homepage = () => {
                 <Link to="/AccountSettings" className="accButton">Account Settings</Link>
             </nav>
             <div className="homepage">
-               
-                                
-            
-                
-
                 <div className="truckle-home">
-                <img src = {home} className ="home"/></div>
-
-               
+                    <img src = {home} className ="home"/></div>
 
                 <div class="background-top"></div>
-                 <div class="background-bottom"></div>
+                <div class="background-bottom"></div>
                                           
                 <div className="foodTruckList">
-
                     {trucks.map((truck, index) => {
                         const { description, imageurl, title, navStr } = truck;
                         return (
@@ -45,9 +36,7 @@ export const Homepage = () => {
                                 <p>{description}</p>
 
                                 <div class="move-truck"></div>
-                                <img src = {move} className ="move"/>
-                                           
-                             
+                                <img src = {move} className ="move"/>             
                             </div>
                         );
                     })}
