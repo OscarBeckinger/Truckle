@@ -54,14 +54,18 @@ const TruckLocations = () => {
     };
     const rieberInfo = truckData[0];
     const sproulInfo = truckData[1];
-    const locations = [rieberInfo?.location, sproulInfo?.location];
-    const times = rieberInfo?.hours || [];
+    //const locations = [rieberInfo?.location, sproulInfo?.location];
+    //const times = rieberInfo?.hours || [];
     const howManyRieber = rieberInfo?.truckNames.length / rieberInfo?.hours.length || 0;
-    const dinnerRieber = rieberInfo?.truckNames.slice(0, howManyRieber) || [];
+    let dinnerRieber = rieberInfo?.truckNames.slice(0, howManyRieber) || [];
     const extendedRieber = rieberInfo?.truckNames.slice(howManyRieber) || [];
     const howManySproul = sproulInfo?.truckNames.length / sproulInfo?.hours.length || 0;
-    const dinnerSproul = sproulInfo?.truckNames.slice(0, howManySproul) || [];
+    let dinnerSproul = sproulInfo?.truckNames.slice(0, howManySproul) || [];
     const extendedSproul = sproulInfo?.truckNames.slice(howManySproul) || [];
+
+    //array filters (if unusual amount of food trucks are present then we have undefined values and need to remove)
+    dinnerSproul = dinnerSproul.filter(item => item !== undefined);
+    dinnerRieber = dinnerRieber.filter(item => item !== undefined);
 
 
     return (
