@@ -6,11 +6,13 @@ import './account-settings.css';
 // AccountSettings has child views such as EditProfile
 const AccountSettings = () => {
   return (
-    <div className="container"> {/* Use className instead of style */}
+    <div className="background">
+    <div className="container">
       <h1 className="heading">Your Profile</h1>
       <div className="content">
         <EditProfile />
       </div>
+    </div>
     </div>
   );
 };
