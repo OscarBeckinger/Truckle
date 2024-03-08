@@ -6,14 +6,16 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import "./review-box.css"
+import { useGetUserInfo } from '../hooks/useGetUserInfo';
 import { useAddReview } from '../hooks/useAddReview';
 
-const FoodTruckReviewForm = ({associatedTruck}) => {
+const FoodTruckReviewForm = ({ associatedTruck }) => {
   const [open, setOpen] = useState(false);
   const [stars, setStars] = useState(0);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const { addReview } = useAddReview();
+  const {getUserInfo} = useGetUserInfo();
 
   const handleOpen = () => {
     setOpen(true);
@@ -25,16 +27,18 @@ const FoodTruckReviewForm = ({associatedTruck}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    addReview({ 
-      title: title, 
-      review: description, 
-      stars: stars, 
-      associatedTruck: associatedTruck 
+    addReview({
+      title: title,
+      review: description,
+      stars: stars,
+      associatedTruck: associatedTruck,
+      getUserInfo: getUserInfo
+
     });
     setTitle("");
     setDescription("");
     setStars("");
-    handleClose(); // Close the modal after submitting the review
+    handleClose(); 
   };
 
   return (
@@ -48,30 +52,20 @@ const FoodTruckReviewForm = ({associatedTruck}) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={{ 
-          position: 'absolute',
+        <Box sx={{
+          position: 'fixed',
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
           bgcolor: 'background.paper',
           boxShadow: 24,
           p: 4,
+          borderRadius: 7,
           width: 400,
         }}>
-          <Typography variant="h6">Add a Review</Typography>
-          <TextField
-            label="Review Title"
-            value={title} required
-            onChange={(e) => setTitle(e.target.value)}
-            fullWidth
-            sx={{ mt: 2 }}
-          />
-          <TextField
-            label="Your Name"
-            fullWidth
-            sx={{ mt: 2 }}
-          />
-          <Typography variant="subtitle1">{`Food Truck: ${associatedTruck}`}</Typography>
+          <Button onClick={handleClose} sx={{ position: 'absolute', top: '10px', left: '10px', fontSize: '20px', color: 'black' }}>X</Button>
+          <Typography variant="h6" sx={{ fontFamily: 'Merriweather', fontSize: '22px', textAlign: 'center' }}>Add a Review</Typography>
+          <Typography variant="subtitle1" sx={{ fontFamily: 'Georgia', fontSize: '18px', textAlign: 'center', mt: 1 }}>{` ${associatedTruck}`}</Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 2 }}>
             <Rating
               name="food-truck-rating"
@@ -87,16 +81,18 @@ const FoodTruckReviewForm = ({associatedTruck}) => {
             multiline
             rows={4}
             fullWidth
-            sx={{ mt: 2 }}
+            sx={{ mt: 2, fontFamily: 'Georgia', fontSize: '16px' }}
           />
-          <Button
-            variant="contained"
-            onClick={handleSubmit}
-            disabled={!stars || !title || !description}
-            sx={{ mt: 2 }}
-          >
-            Submit Review
-          </Button>
+          <Box sx={{ textAlign: 'center' }}>
+            <Button
+              variant="contained"
+              onClick={handleSubmit}
+              disabled={!stars || !description}
+              sx={{ mt: 2 }}
+            >
+              Submit
+            </Button>
+          </Box>
         </Box>
       </Modal>
     </Box>
