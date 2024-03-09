@@ -11,16 +11,15 @@ const AccountSettings = () => {
     
 
     <div className="background">
-    <div className="banner-account">
-    <img src = {banner} className ="banner"/>
 
-    <div className="container">
-      <h1 className="heading">Your Profile</h1>
-      <div className="content">
-        <EditProfile />
+      <div className="container">
+        <div className="content">
+          <EditProfile />
+        </div>
       </div>
-    </div>
-    </div>
+      <div className="banner-account">
+        <img src = {banner} className ="banner"/>
+      </div>
     </div>
   );
 };
