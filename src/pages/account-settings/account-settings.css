@@ -9,18 +9,24 @@
 }
   
 .container {
+    position: absolute;
     max-width: 800px;
+    max-height: 800px;
     margin: 0 auto;
     padding: 20px;
+    padding-top: 20%;
+    overflow-y: auto;
 }
-  
+/*
 .heading {
+    padding-top: 20%;
+    padding-bottom: 10%;
     font-size: 28px;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
-  
+*/
 .content {
     background-color: #f9f9f9;
     padding: 20px;
@@ -30,12 +36,14 @@
 
 .banner-account {
     position: absolute;
-    top: 40%;
+    top: 25%;
+    bottom: -10%;
     left: 50%;
+    right: -32%;
     transform: translate(-50%, -50%);
   }
     
   .banner {
-    max-width: 200%;
+    max-width: 500%;
     height: auto;
   }
