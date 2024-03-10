@@ -1,0 +1,10 @@
+.center {
+    display: flex;
+    justify-content: center; 
+    height: 0; 
+}
+
+.menu-title {
+    color: black; 
+    font-size: 40px; 
+}

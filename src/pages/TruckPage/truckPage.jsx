@@ -2,12 +2,15 @@ import ReviewInputBox from "../../components/ReviewInputBox";
 import CombinedMenuItems from "../../components/CombinedMenuItems";
 import { useGetTruckReviews } from "../../hooks/useGetTruckReviews";
 import Reviews from "../../components/Reviews";
+import "./truckPage.css"
 export const TruckPage = (truckName) => {
     const reviews = useGetTruckReviews(truckName);
     // this has the code where the menu item page is contained and everything 
     return (
         <>
-            <h1>{truckName}</h1>
+            <div className="center">
+            <h1 className="menu-title">{truckName}</h1>
+            </div>
             {/*<TruckMenuItems assocTruck={truckName}></TruckMenuItems>*/}
             <CombinedMenuItems assocTruck={truckName}></CombinedMenuItems>
             <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>

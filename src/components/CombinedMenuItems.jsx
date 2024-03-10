@@ -1,17 +1,20 @@
 import React from "react";
 import { useGetMenuItemsCombined } from "../hooks/useGetMenuItems";
 import "./review-box.css"
+import "./menu.css"
+
 
 const CombinedMenuItems = ({ assocTruck }) => {
     const items = useGetMenuItemsCombined(assocTruck);
 
     return (
         <>
-            <div>Menu Items</div>
+            <div className="heading">Menu Items </div>
             <div>
+            
                 <ul>
                     {items.map((item, index) => {
-                        const { associatedTruck, description, imageurl, title } = item;
+                        const { description, imageurl, title } = item;
                         return (
                             <div key={index}>
                                 <li>
@@ -25,6 +28,7 @@ const CombinedMenuItems = ({ assocTruck }) => {
                     })}
                 </ul>
             </div>
+           
         </>
     );
 };
