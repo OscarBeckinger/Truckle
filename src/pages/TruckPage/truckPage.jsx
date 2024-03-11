@@ -9,32 +9,31 @@ export const TruckPage = (truckName) => {
     const containerRef = useRef(null);
 
     const scrollRight = () => {
-        containerRef.current.scrollLeft += 200; // Adjust as per your design
+        containerRef.current.scrollLeft += 400; 
     };
 
     const scrollLeft = () => {
-        containerRef.current.scrollLeft -= 200; // Adjust as per your design
+        containerRef.current.scrollLeft -= 400; 
     };
+    
 
     return (
         <>
+            <CombinedMenuItems assocTruck={truckName}></CombinedMenuItems>
+            <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>
+            <h2>Reviews: </h2>
             <div className="reviews-header">
-                <h1>{truckName}</h1>
-                <div className="scroll-buttons">
+                <div className="scroll-buttons" style={{ textAlign: "right" }}> 
                     <button onClick={scrollLeft}>{"<"}</button>
                     <button onClick={scrollRight}>{">"}</button>
                 </div>
             </div>
-            <CombinedMenuItems assocTruck={truckName}></CombinedMenuItems>
-            <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>
-            <h2>Reviews: </h2>
-            <p>Review Count: {reviews.length}</p>
             <div className="reviews-container" ref={containerRef}>
                 {reviews.map((truckReview, index) => {
                     const { name, profilePhoto, review, stars, title } = truckReview;
                     return (
                         <div key={index} className="reviewContainer">
-                            <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars}></Reviews>
+                            <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars} review={review}></Reviews>
                         </div>
                     );
                 })}

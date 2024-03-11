@@ -43,9 +43,18 @@ const FoodTruckReviewForm = ({ associatedTruck }) => {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <Button variant="contained" onClick={handleOpen} sx={{ mt: 2 }}>
-        Add a Review
-      </Button>
+    <Button
+  variant="contained"
+  onClick={handleOpen}
+  sx={{
+    mt: 2,
+    fontSize: '12px',
+    padding: '6px 12px', 
+    borderRadius: '20px' 
+  }}
+>
+  Add a Review
+</Button>
       <Modal
         open={open}
         onClose={handleClose}
