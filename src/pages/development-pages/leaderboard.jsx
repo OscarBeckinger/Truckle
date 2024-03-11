@@ -3,6 +3,7 @@ import Board from './board';
 import './leaderboard.css';
 import trophy from '../development-pages/assets/Trophy.png';
 import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+import Navbar from '../../components/Navbar';
 
 function makeConfetti() {
     confetti({
@@ -24,6 +25,8 @@ export default function Leaderboard() {
     makeConfetti(); // Call makeConfetti when component mounts
 
       return (
+        <>
+        <Navbar></Navbar>
             <div className="background">
                   <div className="App" id="main">
                   <Board />
@@ -32,5 +35,6 @@ export default function Leaderboard() {
                         </div>
                   </div>
             </div>
+        </>
     );
 }

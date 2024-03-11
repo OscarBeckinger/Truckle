@@ -1,5 +1,6 @@
 import { useGetTrucks } from '../../hooks/useGetTrucks';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/Navbar';
 import home from '../home-page/assets/TrucklyImageSmall.png';
 import move from '../home-page/assets/movingTruck.png';
 // import CombinedMenuItems from '../../components/CombinedMenuItems';
@@ -16,9 +17,7 @@ export const Homepage = () => {
     return (
         <>
             {/* is this proper way to do navigation? */}
-            <nav>
-                <Link to="/AccountSettings" className="accButton">Account Settings</Link>
-            </nav>
+            <Navbar></Navbar>
             <div className="homepage">
                 <div className="truckle-home">
                     <img src = {home} className ="home"/></div>
