@@ -1,34 +1,43 @@
-.reviewItem {
-    border-radius: 15px;
-    width: 300px;
-    height: auto;
-    margin: 10px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+.reviews-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-  }
-  
-  .reviewItemContent {
-    padding: 20px;
-  }
-  
-  .reviewItemTitle {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .reviewItemDescription {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .reviewItemRating {
-    margin-bottom: 10px;
-  }
-  
-  .reviewItemAuthor {
-    font-size: 14px;
-    color: #888;
-  }
+    margin-bottom: 20px;
+}
+
+.scroll-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-buttons button {
+    background-color: #ccc; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.scroll-buttons button:hover {
+    background-color: #999; 
+}
+
+.reviews-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px 0;
+    max-width: 100%;
+}
+
+.reviewContainer {
+    flex: 0 0 auto; 
+    width: 300px; 
+    margin-right: 20px; 
+    border-radius: 15px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    background-color: #f5f5f5;
+    overflow: hidden; 
+}

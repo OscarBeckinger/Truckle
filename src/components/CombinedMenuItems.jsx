@@ -1,7 +1,9 @@
 import React from "react";
 import { useGetMenuItemsCombined } from "../hooks/useGetMenuItems";
+import "./review-box.css"
 import MenuItem from "./MenuItem"; 
 import "./menu.css";
+
 
 const CombinedMenuItems = ({ assocTruck }) => {
     const items = useGetMenuItemsCombined(assocTruck);
