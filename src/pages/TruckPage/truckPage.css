@@ -1,5 +1,5 @@
 .center {
-<<<<<<< HEAD
+
     display: flex; 
     justify-content: center; 
     height: 0;
@@ -8,8 +8,7 @@
 
 .title {
     color: rgb(0, 0, 0);
-    font-size: 40px
-=======
+    font-size: 40px;
     display: flex;
     justify-content: center; 
     height: 0; 
@@ -18,5 +17,5 @@
 .menu-title {
     color: black; 
     font-size: 40px; 
->>>>>>> main
+
 }
