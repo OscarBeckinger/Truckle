@@ -1,6 +1,8 @@
 import algoliasearch from "algoliasearch";
 import { useState, useEffect } from "react";
 import { InstantSearch, SearchBox, Hits, Highlight } from "react-instantsearch";
+import SearchMenuItem from "./SearchMenuItem"; 
+
 const Search = () => {
     const [searchClient, setSearchClient] = useState(null);
     useEffect(() => {
@@ -27,12 +29,7 @@ const Search = () => {
     const Hit = ({ hit }) => {
         return (
             <div>
-                <h2>
-                    <Highlight className={highlightedClasses} attribute='title' hit={hit}></Highlight>
-                </h2>
-                <img src={hit.imageurl} alt="menu item" height="100" width="100" />
-                <p>{hit.description}</p>
-                <p>{hit.associatedTruck}</p>
+                <SearchMenuItem hit={hit}></SearchMenuItem>
             </div>
         );
     }

@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+function decodeHTMLEntities(str) { //switch ascii code to char
+    const element = document.createElement("div");
+    element.innerHTML = str;
+    return element.innerText || element.textContent;
+}
+
 const TruckLocations = () => {
     const [truckData, setTruckData] = useState([]);
 
@@ -58,14 +64,21 @@ const TruckLocations = () => {
     //const times = rieberInfo?.hours || [];
     const howManyRieber = rieberInfo?.truckNames.length / rieberInfo?.hours.length || 0;
     let dinnerRieber = rieberInfo?.truckNames.slice(0, howManyRieber) || [];
-    const extendedRieber = rieberInfo?.truckNames.slice(howManyRieber) || [];
+    let extendedRieber = rieberInfo?.truckNames.slice(howManyRieber) || [];
     const howManySproul = sproulInfo?.truckNames.length / sproulInfo?.hours.length || 0;
     let dinnerSproul = sproulInfo?.truckNames.slice(0, howManySproul) || [];
-    const extendedSproul = sproulInfo?.truckNames.slice(howManySproul) || [];
+    let extendedSproul = sproulInfo?.truckNames.slice(howManySproul) || [];
 
     //array filters (if unusual amount of food trucks are present then we have undefined values and need to remove)
     dinnerSproul = dinnerSproul.filter(item => item !== undefined);
     dinnerRieber = dinnerRieber.filter(item => item !== undefined);
+    extendedSproul = extendedSproul.filter(item => item !== undefined);
+    extendedRieber = extendedRieber.filter(item => item !== undefined);
+
+    dinnerRieber = dinnerRieber.map(str => decodeHTMLEntities(str));
+    dinnerSproul = dinnerSproul.map(str => decodeHTMLEntities(str)); 
+    extendedRieber = extendedRieber.map(str => decodeHTMLEntities(str)); 
+    extendedSproul = extendedSproul.map(str => decodeHTMLEntities(str));  
 
 
     return (
