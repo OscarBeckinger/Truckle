@@ -1,4 +1,5 @@
 import { useGetTrucks } from '../../hooks/useGetTrucks';
+import { useGetFavs } from '../../hooks/useGetFavs';     //favs
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import home from '../home-page/assets/TrucklyImageSmall.png';
@@ -8,6 +9,8 @@ import './homepage.css';
 
 export const Homepage = () => {
     const { trucks } = useGetTrucks();
+    const { favs } = useGetFavs();         //testing favs
+    console.log(favs);
     const navigate = useNavigate();
     const handleClick = (navstr) => {
         // state object can contain any data you want to pass to the destination page.
