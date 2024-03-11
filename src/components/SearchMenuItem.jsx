@@ -1,8 +1,9 @@
 import React from "react";
 import { Highlight } from "react-instantsearch";
+import "./menu.css";
 const SearchMenuItem = ({ hit }) => {
     return (
-        <div>
+        <div className="container">
                 <h2>
                     <Highlight attribute='title' hit={hit}></Highlight>
                 </h2>
