@@ -1,6 +1,6 @@
 import React from "react";
 import { useGetMenuItemsCombined } from "../hooks/useGetMenuItems";
-import "./review-box.css";
+import MenuItem from "./MenuItem"; 
 import "./menu.css";
 
 const CombinedMenuItems = ({ assocTruck }) => {
@@ -18,9 +18,7 @@ const CombinedMenuItems = ({ assocTruck }) => {
                                 <div key={index} className="container-list">
                                     <li>
                                         <div className="container">
-                                            <img src={imageurl} alt="menu item" height="100" width="100" />
-                                            <h2>{title}</h2>  
-                                            <p>{description}</p>
+                                            <MenuItem imageurl={imageurl} title={title} description={description}></MenuItem> 
                                         </div>
                                     </li>
                                 </div>
