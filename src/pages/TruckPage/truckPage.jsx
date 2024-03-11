@@ -39,7 +39,7 @@ export const TruckPage = (truckName) => {
                     const { name, profilePhoto, review, stars, title } = truckReview;
                     return (
                         <div key={index} className="reviewContainer">
-                            <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars}></Reviews>
+                            <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars} review={review}></Reviews>
                         </div>
                     );
                 })}
