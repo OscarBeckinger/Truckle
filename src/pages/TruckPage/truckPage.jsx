@@ -27,7 +27,7 @@ export const TruckPage = (truckName) => {
             </div>
             <CombinedMenuItems assocTruck={truckName}></CombinedMenuItems>
             <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>
-            <h2>Reviews: </h2>
+            <h2>Reviews </h2>
             <div className="reviews-header">
                 <div className="scroll-buttons" style={{ textAlign: "right" }}> 
                     <button onClick={scrollLeft}>{"<"}</button>
