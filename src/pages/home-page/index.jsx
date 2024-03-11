@@ -9,6 +9,7 @@ import {Fa} from "react-icons/fa";
 import { useState } from "react";
 import { useGetFavorites } from '../../hooks/useGetFavorites';
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
+import TruckLocations from '../../components/TruckLocations';
 
 
 export const Homepage = () => {
@@ -64,6 +65,9 @@ export const Homepage = () => {
                         );
                     })}
                 </div>
+            </div>
+            <div className="locations">
+                    <TruckLocations></TruckLocations>
             </div>
         </>
     );
