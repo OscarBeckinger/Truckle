@@ -1,4 +1,5 @@
 import { useGetTrucks } from '../../hooks/useGetTrucks';
+import { useGetFavs } from '../../hooks/useGetFavs';     //favs
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import home from '../home-page/assets/TrucklyImageSmall.png';
@@ -17,6 +18,8 @@ export const Homepage = () => {
     const {truckReviews} = useGetFavorites();
     const { trucks } = useGetTrucks();
     const { userID } = useGetUserInfo();
+    const { favs } = useGetFavs();         //testing favs
+    console.log(favs);
     const navigate = useNavigate();
     const [clickedIcons, setClickedIcons] = useState(Array(trucks.length).fill(false));
     const handleClick = (navstr) => {
