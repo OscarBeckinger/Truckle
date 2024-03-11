@@ -31,6 +31,15 @@
   z-index: 2147483646;
 }
 
+.locations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This ensures the content is centered vertically */
+  margin: 0;
+  margin-top: -180px;
+}
+
 .truckTitle {
   margin-left: 20px;
 }
