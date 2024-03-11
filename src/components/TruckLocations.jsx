@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import "./locations.css";
 
 function decodeHTMLEntities(str) { //switch ascii code to char
     const element = document.createElement("div");
@@ -82,14 +83,17 @@ const TruckLocations = () => {
 
 
     return (
+        <div className="truck-data-container">
         <div>
+            <h2>Times/Locations</h2>
+        </div>
             {truckData.map(truck => (
-                <div key={truck.location}>
+                <div key={truck.location} className="truck-location">
                     <h3>{truck.location}</h3>
                     {truck.hours.map((hour, index) => (
-                        <div key={index}>
-                            <p>{hour}</p>
-                            <ul>
+                        <div key={index} className="truck-hours">
+                            <p className="hour">{hour}</p>
+                            <ul className="truck-list">
                                 {index === 0 ? (
                                     truck.location === 'Rieber Turnaround Food Trucks' ?
                                         dinnerRieber.map((truckName, idx) => (

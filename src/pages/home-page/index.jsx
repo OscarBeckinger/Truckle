@@ -9,7 +9,6 @@ import {Fa} from "react-icons/fa";
 import { useState } from "react";
 import { useGetFavorites } from '../../hooks/useGetFavorites';
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
-//import { useGetMenuItemsCombinedd } from '../../hooks/useGetFavorites';
 
 
 export const Homepage = () => {
