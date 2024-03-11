@@ -1,7 +1,8 @@
 import algoliasearch from "algoliasearch";
 import { useState, useEffect } from "react";
 import { InstantSearch, SearchBox, Hits, Highlight } from "react-instantsearch";
-import SearchMenuItem from "./SearchMenuItem"; 
+import SearchMenuItem from "./SearchMenuItem";
+import "./search.css";
 
 const Search = () => {
     const [searchClient, setSearchClient] = useState(null);
@@ -40,7 +41,7 @@ const Search = () => {
                 {searchClient &&
                     <div>
                         <InstantSearch searchClient={searchClient} indexName="menu_items">
-                            <SearchBox className={searchClasses} placeholder="Search Menu Items" searchAsYouType={true}></SearchBox>
+                            <SearchBox className="test" placeholder="Search Menu Items" searchAsYouType={true}></SearchBox>
                             <Hits className={hitClasses} hitComponent={Hit}></Hits>
                         </InstantSearch>
                     </div>
