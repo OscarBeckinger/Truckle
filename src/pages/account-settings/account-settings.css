@@ -1,6 +1,6 @@
 /*account-settings.css*/
 
-body {
+.background {
     margin: 0;
     padding: 0;
     font-family: Merriweather, sans-serif;
@@ -27,3 +27,15 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.banner-account {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+    
+  .banner {
+    max-width: 900px;
+    height: auto;
+  }

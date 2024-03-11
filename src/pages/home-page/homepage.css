@@ -10,19 +10,17 @@
 }
 
 .foodTruckList {
- 
-width: 70vw;
-height: auto;
-display: flex;
-flex-wrap : wrap;
-justify-content: space-around;
-padding-top: 470px;
+  width: 70vw;
+  height: auto;
+  display: flex;
+  flex-wrap : wrap;
+  justify-content: space-around;
+  padding-top: 470px;
 }
 
 /* FOOD TRUCK ITEM STYLING */
 
 .foodTruckItem {
-
   border-radius: 15px;
   width: 300px;
   height: auto;
@@ -31,6 +29,7 @@ padding-top: 470px;
   display: flex;
   flex-direction: column;
   align-items: left;
+  z-index: 2147483646;
 }
 
 .truckTitle {
@@ -64,62 +63,58 @@ padding-top: 470px;
   text-align: left;
   max-width: 260px;
   overflow: hidden;
-    text-overflow: ellipsis;
-white-space: nowrap;
-
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 @media only screen and (max-width: 1300px) {
-.foodTruckList {
-  grid-template-columns: 1fr 1fr;
-}
+  .foodTruckList {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (max-width: 800px) {
 .foodTruckList {
     grid-template-columns: 1fr;
-}
+  }
 }
 
 .accButton {
-    position: absolute;
-    top: 10px; /* Adjust this value to adjust the distance from the top */
-    right: 10px; /* Adjust this value to adjust the distance from the right */
+  position: absolute;
+  top: 10px; /* Adjust this value to adjust the distance from the top */
+  right: 10px; /* Adjust this value to adjust the distance from the right */
 }
 
-
-  .truckle-home {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.truckle-home {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
   
-  .home {
-    max-width: 400px;
-    height: auto;
-  }
+.home {
+  max-width: 400px;
+  height: auto;
+}
 
-  .background-top
- {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    z-index: -1;
-    top: 0;
-    background: linear-gradient( #93dfec 0%, #0078b7 100%);
- }
+.background-top {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  top: 0;
+  background: linear-gradient( #93dfec 0%, #0078b7 100%);
+  background-repeat: no-repeat;
+}
 
-
- .background-bottom {
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    z-index: -1;
-    bottom: 0;
-    background: #FFFFFF;
- }
-
+.background-bottom {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  bottom: 0;
+  background: #FFFFFF;
+}
 
  .move-truck {
     position: fixed;
@@ -127,7 +122,6 @@ white-space: nowrap;
     height: 100vh;
     padding: 700px;
  }
- 
  
  .move {
     position: fixed;
@@ -137,7 +131,6 @@ white-space: nowrap;
     height: auto;
     animation: moveTruck 10s linear infinite;
  }
- 
  
  @keyframes moveTruck {
     from {left: -100px;}
