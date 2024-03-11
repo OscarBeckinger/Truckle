@@ -2,16 +2,15 @@ import React from 'react';
 import EditProfile from '../../components/EditProfile';
 import './account-settings.css';
 import banner from '../auth/assets/accountPage.png';
+import Navbar from '../../components/Navbar';
 // This is the Account Settings page, it displays eveyrthing related to you acc information:
 // name, email, all your reviews
 // AccountSettings has child views such as EditProfile
 const AccountSettings = () => {
   return (
-
-    
-
+    <>
+    <Navbar></Navbar>
     <div className="background">
-
       <div className="container">
         <div className="content">
           <EditProfile />
@@ -21,6 +20,7 @@ const AccountSettings = () => {
         <img src = {banner} className ="banner"/>
       </div>
     </div>
+    </>
   );
 };
 
