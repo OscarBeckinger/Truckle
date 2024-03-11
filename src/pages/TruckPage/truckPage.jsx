@@ -1,37 +1,43 @@
-import React from "react";
+import React, { useRef } from "react";
 import ReviewInputBox from "../../components/ReviewInputBox";
 import CombinedMenuItems from "../../components/CombinedMenuItems";
 import { useGetTruckReviews } from "../../hooks/useGetTruckReviews";
 import Reviews from "../../components/Reviews";
-import "./truckPage.css";
 
-export const TruckPage = (truckName) => { // Destructuring truckName from props object
+export const TruckPage = (truckName) => {
     const reviews = useGetTruckReviews(truckName);
+    const containerRef = useRef(null);
+
+    const scrollRight = () => {
+        containerRef.current.scrollLeft += 200; // Adjust as per your design
+    };
+
+    const scrollLeft = () => {
+        containerRef.current.scrollLeft -= 200; // Adjust as per your design
+    };
 
     return (
         <>
-            <div className="center">
-                <h1 className="menu-title">{truckName}</h1>
+            <div className="reviews-header">
+                <h1>{truckName}</h1>
+                <div className="scroll-buttons">
+                    <button onClick={scrollLeft}>{"<"}</button>
+                    <button onClick={scrollRight}>{">"}</button>
+                </div>
             </div>
-
             <CombinedMenuItems assocTruck={truckName}></CombinedMenuItems>
             <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>
             <h2>Reviews: </h2>
             <p>Review Count: {reviews.length}</p>
-            <div className="reviews">
-                <ul>
-                    {reviews.map((truckReview) => {
-                        const { name, profilePhoto, review, stars, title } = truckReview;
-                        return (
-                            <div className='list-item-div' key={truckReview.id}>
-                                <li>
-                                    <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars}></Reviews>
-                                    {/* <button onClick={() => { deleteFunction }}>Delete</button> (if we have time: only make this appear on reviews that match current user id (so only the person who posted the review can delete it)) */}
-                                </li>
-                            </div>
-                        );
-                    })}
-                </ul>
+            <div className="reviews-container" ref={containerRef}>
+                {reviews.map((truckReview, index) => {
+                    const { name, profilePhoto, review, stars, title } = truckReview;
+                    return (
+                        <div key={index} className="reviewContainer">
+                            <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars}></Reviews>
+                        </div>
+                    );
+                })}
             </div>
         </>
     );
