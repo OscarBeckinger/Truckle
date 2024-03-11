@@ -1,13 +1,23 @@
+
+.profile-info {
+    display: flex;
+    align-items: center;
+  }
+  .name {
+    margin-left: 10px; 
+    font-weight: bold;
+  }
+
 .reviews-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 20px;
 }
 
 .scroll-buttons {
     display: flex;
-    align-items: center;
+    align-items: right;
 }
 
 .scroll-buttons button {
@@ -33,6 +43,7 @@
 
 .reviewContainer {
     flex: 0 0 auto; 
+    display: flex;
     width: 300px; 
     margin-right: 20px; 
     border-radius: 15px;
