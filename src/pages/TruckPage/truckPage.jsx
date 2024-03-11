@@ -3,6 +3,7 @@ import ReviewInputBox from "../../components/ReviewInputBox";
 import CombinedMenuItems from "../../components/CombinedMenuItems";
 import { useGetTruckReviews } from "../../hooks/useGetTruckReviews";
 import Reviews from "../../components/Reviews";
+import './truckPage.css';
 import Navbar from "../../components/Navbar";
 
 export const TruckPage = (truckName) => {
@@ -10,17 +11,20 @@ export const TruckPage = (truckName) => {
     const containerRef = useRef(null);
 
     const scrollRight = () => {
-        containerRef.current.scrollLeft += 400; 
+        containerRef.current.scrollLeft += 200; // Adjust as per your design
     };
 
     const scrollLeft = () => {
-        containerRef.current.scrollLeft -= 400; 
+        containerRef.current.scrollLeft -= 200; // Adjust as per your design
     };
-    
 
     return (
         <>
+
             <Navbar></Navbar>
+            <div className="center">
+                <h1 className="menu-title">{truckName}</h1>
+            </div>
             <CombinedMenuItems assocTruck={truckName}></CombinedMenuItems>
             <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>
             <h2>Reviews: </h2>
@@ -35,7 +39,7 @@ export const TruckPage = (truckName) => {
                     const { name, profilePhoto, review, stars, title } = truckReview;
                     return (
                         <div key={index} className="reviewContainer">
-                            <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars} review={review}></Reviews>
+                            <Reviews name={name} profilePhoto={profilePhoto} title={title} stars={stars}></Reviews>
                         </div>
                     );
                 })}
