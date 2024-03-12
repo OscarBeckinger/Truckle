@@ -19,7 +19,6 @@ export const TruckPage = (truckName) => {
 
     return (
         <>
-
             <Navbar></Navbar>
             <div className="center">
                 <h1 className="menu-title">{truckName}</h1>
