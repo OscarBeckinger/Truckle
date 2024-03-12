@@ -1,7 +1,7 @@
 import React from 'react';
 import Board from './board';
 import './leaderboard.css';
-import trophy from '../development-pages/assets/Trophy.png';
+import trophy from '../Leaderboard/assets/Trophy.png';
 import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 import Navbar from '../../components/Navbar';
 

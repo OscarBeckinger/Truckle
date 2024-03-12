@@ -1,6 +1,6 @@
 import React from 'react';
 import Profiles from "./projiles";
-import { useGetTrucksLeaderboard } from './useGetTruckLeaderbord';
+import { useGetTrucksLeaderboard } from '../../hooks/useGetTruckLeaderbord';
 import { useNavigate } from 'react-router-dom';
 // By wrapping the handleClick call inside an arrow function inside onClick, you ensure that the function is only called when the button is clicked, not when the component renders. This should resolve the issue of navigating to /AboutRanking when trying to go to the Leaderboard.
 function Board() {
