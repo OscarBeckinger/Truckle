@@ -14,7 +14,6 @@ import {handleDeleteFavorites, handleAddFavorites}  from "../../hooks/handleFavo
 import { useEffect } from 'react';
 
 export const Homepage = () => {
-    // const { favor } = useGetTrucks();
     const { addFavorite } = handleAddFavorites();
     const { userID } = useGetUserInfo();
     const {userFavorites} = useGetFavorites(userID);
@@ -43,42 +42,50 @@ export const Homepage = () => {
         const updatedClickedIcons = [...clickedIcons];
         const isCurrentlyFavorited = updatedClickedIcons[index];
         if (isCurrentlyFavorited) {
-          // improvement is to pass in the doc.id for it but we will work for a manual search!
-          handleDeleteFavorites(userID, associatedTruck);
-        } else {
+            // improvement is to pass in the doc.id for it but we will work for a manual search!
+            handleDeleteFavorites(userID, associatedTruck)
+              .then(deleted => {
+                if (deleted) {
+                  updatedClickedIcons[index] = !isCurrentlyFavorited;
+                  setClickedIcons(updatedClickedIcons);
+                }
+              })
+              .catch(error => {
+                console.error("Error deleting favorites:", error);
+              });
+          } else {
           // If the item is not currently favorited, add it to favorites
           console.log(associatedTruck);
           addFavorite({
             associatedTruck: associatedTruck,
             userID: userID
-      
           });
-        }
-      
-        // Update the state to reflect the change
+             // Update the state to reflect the change
         updatedClickedIcons[index] = !isCurrentlyFavorited;
         setClickedIcons(updatedClickedIcons);
+        }
+      
       
         console.log(userID);
         console.log(userFavorites.length);
       };
 
     return (
-        <>
-            {/* is this proper way to do navigation? */}
+<>
             <Navbar></Navbar>
-            <div className="homepage">
-                <div className="truckle-home">
-                    <img src = {home} className ="home"/></div>
+<div className="homepage">
+    <div className="truckle-home">
+        <img src = {home} className ="home"/>
+    </div>
 
-                <div class="background-top"></div>
-                <div class="background-bottom"></div>
+    <div class="background-top"></div>
+    <div class="background-bottom"></div>
                                           
-                <div className="foodTruckList">
-                    {trucks.map((truck, index) => {
-                        const { description, imageurl, title, navStr } = truck;
-                        return (
-                            <div className="foodTruckItem" key={index} onClick={() => handleClick(navStr)}>
+    <div className="foodTruckList">
+        {trucks.map((truck, index) => {
+        const { description, imageurl, title, navStr } = truck;
+        return (
+        <div className="foodTruckItem" key={index} onClick={() => handleClick(navStr)}>
                                 <div style={{ backgroundImage: `url(${imageurl})` }}></div>
                                  <h2 className="truckTitle">{title}</h2>
                                 <p>{description}</p>
@@ -87,17 +94,20 @@ export const Homepage = () => {
                   onClick={(e) => handleStarClick( index, e, truck.title)} // Pass event and index to handleStarClick
                   style={{ cursor: 'pointer', fill: clickedIcons[index] ? 'red' : 'inherit'}} // Apply yellow color if clicked
                 />
-
-                                <div class="move-truck"></div>
-                                <img src = {move} className ="move"/>             
-                            </div>
+        
+        </div>
                         );
-                    })}
-                </div>
-            </div>
-            <div className="locations">
-                    <TruckLocations></TruckLocations>
-            </div>
-        </>
+                    })} 
+    </div>
+</div>
+                            <div className="locations">
+                            <TruckLocations></TruckLocations>
+                             </div>
+
+
+{/* please do not put back in foodTruckList, this caused bug */}
+<div class="move-truck"></div>
+<img src = {move} className ="move"/>    
+</>
     );
 };
