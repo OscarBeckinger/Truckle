@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Board from './board';
 import './leaderboard.css';
 import trophy from '../Leaderboard/assets/Trophy.png';
@@ -21,13 +21,15 @@ function makeConfetti() {
     }, 5000); // The time for how long you want the confetti to stay on the screen
 }
 
-
-
 export default function Leaderboard() {
-    makeConfetti(); // Call makeConfetti when component mounts
-    
+    useEffect(() => {
+        makeConfetti(); // Call makeConfetti when component mounts
 
-
+        // Clean up the confetti effect when the component unmounts
+        return () => {
+            confetti.reset();
+        };
+    }, []);
 
       return (
         <>
