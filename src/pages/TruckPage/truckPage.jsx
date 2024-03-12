@@ -10,17 +10,15 @@ export const TruckPage = (truckName) => {
     const reviews = useGetTruckReviews(truckName);
     const containerRef = useRef(null);
 
-    const scrollRight = () => {
-        containerRef.current.scrollLeft += 200; // Adjust as per your design
-    };
-
-    const scrollLeft = () => {
-        containerRef.current.scrollLeft -= 200; // Adjust as per your design
+    const scrollTo = (scrollOffset) => {
+        containerRef.current.scrollTo({
+            left: containerRef.current.scrollLeft + scrollOffset,
+            behavior: "smooth" 
+        });
     };
 
     return (
         <>
-
             <Navbar></Navbar>
             <div className="center">
                 <h1 className="menu-title">{truckName}</h1>
@@ -30,8 +28,8 @@ export const TruckPage = (truckName) => {
             <h2>Reviews </h2>
             <div className="reviews-header">
                 <div className="scroll-buttons" style={{ textAlign: "right" }}> 
-                    <button onClick={scrollLeft}>{"<"}</button>
-                    <button onClick={scrollRight}>{">"}</button>
+                    <button onClick={() => scrollTo(-50)}>{"<"}</button>
+                    <button onClick={() => scrollTo(50)}>{">"}</button>
                 </div>
             </div>
             <div className="reviews-container" ref={containerRef}>
