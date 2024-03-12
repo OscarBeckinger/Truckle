@@ -28,12 +28,15 @@ export const handleDeleteFavorites = async (userID, associatedTruck) => {
               });
   
               console.log("Favorites successfully deleted.");
+              return true;
           } catch (error) {
               console.error("Error deleting favorites:", error);
+              return false;
           }
       } else {
           // Do nothing if the user cancels
           // alert("Deletion cancelled.");
+          return false;
       }
   };
 
