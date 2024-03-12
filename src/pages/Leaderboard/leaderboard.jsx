@@ -21,15 +21,6 @@ function makeConfetti() {
     }, 5000); // The time for how long you want the confetti to stay on the screen
 }
 
-function calculateScore(truckName, reviews) {
-    //const reviews = getTruckReviews(truckName);
-    //const stars = getStars(truckName);
-    //const sum = sum(stars);
-    //console.log("Reviews: ", reviews);
-
-    return Math.floor(Math.random() * 20) + 1;
-}
-
 
 
 export default function Leaderboard() {
