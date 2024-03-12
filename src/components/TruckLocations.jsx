@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import "./locations.css";
+import "./TruckLocations.css";
 
 function decodeHTMLEntities(str) { //switch ascii code to char
     const element = document.createElement("div");

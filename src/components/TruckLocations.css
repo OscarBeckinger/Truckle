@@ -1,13 +1,16 @@
+/* TruckLocations.css */
 
 .truck-data-container {
     text-align: center;
     padding: 20px;
     background-color: #f7f7f7;
-    width: 18%;
-    height: 300px;
+    display: inline-block;
     border-radius: 10px;
     justify-content: center
-    
+}
+
+.truck-data-container h2 {
+    margin-bottom: 20px;
 }
 
 .truck-location {
