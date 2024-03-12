@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import ReviewInputBox from "../../components/ReviewInputBox";
 import CombinedMenuItems from "../../components/CombinedMenuItems";
-import { useGetTruckReviews } from "../../hooks/useGetTruckReviews";
+import { useGetTruckReviews } from "../../hooks/getTruckReviews";
 import Reviews from "../../components/Reviews";
 import './truckPage.css';
 import Navbar from "../../components/Navbar";

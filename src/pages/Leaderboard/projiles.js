@@ -9,7 +9,6 @@ export default function profiles({ Leaderboard }) {
 
 function Item(data){
     return (
-
         <>
             {
                 data.map((value, index) => (
@@ -21,9 +20,6 @@ function Item(data){
                                 <h3 className='name text-dark'>{value.title}</h3>    
                                 <span>Ranking: {index + 1}</span>
                             </div>                
-                        </div>
-                        <div className="item">
-                            <span>Score: {value.reviewCount}</span>
                         </div>
                     </div>
                     )
