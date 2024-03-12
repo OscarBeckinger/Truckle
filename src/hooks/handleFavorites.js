@@ -8,7 +8,6 @@ import { db } from "../config/firebase-config";
 export const handleDeleteFavorites = async (userID, associatedTruck) => {
       // Display a confirmation dialog
       const confirmed = window.confirm("Are you sure you want to remove from favorites?");
-    
       // If the user confirms deletion, proceed with deletion
       if (confirmed) {
           try {
@@ -41,7 +40,6 @@ export const handleDeleteFavorites = async (userID, associatedTruck) => {
   };
 
     export const handleAddFavorites =  (associatedTruck, userID) => {
-      console.log("im called");
       const reviewsCollectionRef = collection(db, "favorites");
             const addFavorite = async ({ associatedTruck, userID }) => {
                   await addDoc(reviewsCollectionRef, {
