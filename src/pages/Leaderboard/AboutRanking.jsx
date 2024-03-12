@@ -1,4 +1,8 @@
+/* AboutRanking.jsx */
+
 import React from 'react';
+import './AboutRanking.css';
+
 function AboutRanking() {
   return (
     <div id="profile">
