@@ -1,4 +1,3 @@
-import { useGetTruckReviews } from "./getTruckReviews";
 import { useGetTrucks } from "./useGetTrucks";
 import { useGetAllReviews } from "./useGetAllReviews";
 
@@ -11,7 +10,6 @@ export const useGetScores = (truckNames) => {
     const allReviews  = useGetAllReviews();  
     const avgOfReviews = allReviews.reviews.length / trucks.length;  //getting the average amount of all reviews (total reviews (for all trucks) / amount of trucks)
     const scores = {};
-    console.log("ALL REVIEWS: ", allReviews);
 
     truckNames.forEach(truckName => {
         const reviews = allReviews.reviews.filter(obj => obj.associatedTruck === truckName);
