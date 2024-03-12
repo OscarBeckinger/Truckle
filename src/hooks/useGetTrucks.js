@@ -13,6 +13,7 @@ export const useGetTrucks = () => {
                 const truckdata = doc.data();
                 const { description, imageurl, title, navStr } = truckdata;
                 const truckEntry = {
+                    id: doc.id,
                     description,
                     imageurl,
                     title,

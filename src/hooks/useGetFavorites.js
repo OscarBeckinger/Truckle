@@ -1,44 +1,31 @@
-import { useEffect, useState } from "react";
-import { query, collection, where, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../config/firebase-config";
-//import { useGetUserInfo } from "./useGetUserInfo";
+import { useState, useEffect } from "react";
+import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { useGetUserInfo } from "./useGetUserInfo";
+export const useGetFavorites = (userID) => {
+    const reviewsCollectionRef = collection(db, "favorites");
+    const [userFavorites, setuserFavorites] = useState([]);
 
-export const useGetFavorites = (truckName) => {
-    const [truckReviews, setTruckReviews] = useState([]);
-    //const { userID } = useGetUserInfo(); (adding this makes other users profiles photos go away for some reason)
-    const reviewCollectionRef = collection(db, "reviews");
     useEffect(() => {
-        const getTruckReviews = async () => {
-            let unsubscribe;
-            try {
-                const queryReviews = query(reviewCollectionRef, where("associatedTruck", "==", truckName), orderBy("createdAt"));
-                unsubscribe = onSnapshot(queryReviews, (snapshot) => {
-                    let docs = [];
-                    snapshot.forEach((doc) => {
-                        const reviewData = doc.data();
-                        const { createdAt, review, stars, title, profilePhoto, name } = reviewData;
-                        const reviewEntry = {
-                            id: doc.id,
-                            createdAt,
-                            review,
-                            stars,
-                            title,
-                            profilePhoto,
-                            name,
-                        };
-                        docs.push(reviewEntry);
-                    });
-                    setTruckReviews(docs);
-                });
-            } catch (error) { console.error(error) }
-            return () => unsubscribe();
-        };
+        const q = query(collection(db, "favorites"), where("userID", "==", userID));
+        const unsubscribe = onSnapshot(q, (querySnapshot) => {
+            const reviewsArr = [];
+            querySnapshot.forEach((doc) => {
+                const reviewData = doc.data();
+                const { associatedTruck, userID} = reviewData;
+                const reviewEntry = {
+                    id: doc.id,
+                    associatedTruck,
+                    userID,
+                };
+                reviewsArr.push(reviewEntry);
+            });
+            setuserFavorites(reviewsArr);
+        });
 
-        getTruckReviews();
+        // Cleanup function to unsubscribe from the snapshot listener
+        return () => unsubscribe();
+    }, [userID]);
 
-        return () => { }; // cleanup function
-    }, [truckName]);
-
-    return { truckReviews };
+    return { userFavorites };
 };
-

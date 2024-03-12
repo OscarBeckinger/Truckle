@@ -4,8 +4,8 @@ import { Homepage } from "./pages/home-page";
 import { TruckPage } from "./pages/TruckPage/truckPage";
 import { Searchpage } from "./pages/search-page";
 import AccountSettings from "./pages/account-settings/AccountSettings";
-import LeaderBoard from "./pages/development-pages/leaderboard";
-import AboutRanking from "./pages/development-pages/AboutRanking";
+import LeaderBoard from "./pages/Leaderboard/leaderboard";
+import AboutRanking from "./pages/Leaderboard/AboutRanking";
 
 // found weird glitch: if type pagen, it blank screen cause not valid path, if i say page to rever back to actual pack throws error cannot read properties of null (readin 'title'); I think because its a default, does not know how to work with no data. 
 
