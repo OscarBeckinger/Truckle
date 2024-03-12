@@ -73,6 +73,7 @@ export const Homepage = () => {
     return (
 <>
             <Navbar></Navbar>
+           
 <div className="homepage">
     <div className="truckle-home">
         <img src = {home} className ="home"/>
@@ -80,6 +81,7 @@ export const Homepage = () => {
 
     <div class="background-top"></div>
     <div class="background-bottom"></div>
+   
                                           
     <div className="foodTruckList">
         {trucks.map((truck, index) => {
@@ -99,15 +101,19 @@ export const Homepage = () => {
                         );
                     })} 
     </div>
+  
+    <div className="truck">
+
+    <div class="move-truck"></div>
+    <img src = {move} className ="move"/>  
+    </div> 
 </div>
                             <div className="locations">
                             <TruckLocations></TruckLocations>
                              </div>
 
 
-{/* please do not put back in foodTruckList, this caused bug */}
-<div class="move-truck"></div>
-<img src = {move} className ="move"/>    
+  
 </>
     );
 };
