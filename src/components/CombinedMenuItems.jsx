@@ -10,8 +10,7 @@ const CombinedMenuItems = ({ assocTruck }) => {
 
     return (
         <>
-            <div className="menupage">
-                <div className="heading">Menu Items</div>
+            
                 <div>
                     <ul>
                         {items.map((item, index) => {
@@ -28,7 +27,7 @@ const CombinedMenuItems = ({ assocTruck }) => {
                         })}
                     </ul>
                 </div>
-            </div>
+       
         </>
     );
 };

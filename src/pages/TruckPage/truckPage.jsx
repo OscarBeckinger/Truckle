@@ -6,6 +6,7 @@ import Reviews from "../../components/Reviews";
 import './truckPage.css';
 import Navbar from "../../components/Navbar";
 
+
 export const TruckPage = (truckName) => {
     const reviews = useGetTruckReviews(truckName);
     const containerRef = useRef(null);
