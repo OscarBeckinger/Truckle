@@ -1,13 +1,25 @@
+/* truckPage.css */
+
+.page-container {
+    min-height: 100vh; /* Ensures the gradient covers the entire viewport height */
+}
+
+.gradient-background {
+    background-image: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%);
+}
+
+.content-container {
+    background-color: white;
+    padding: 20px;
+}
+
 .center {
     display: flex;
     justify-content: center; 
-    height: 0;
-    padding-top: 20px;
-    padding-bottom: 80px;
 }
 
 .menu-title {
     color: black; 
     font-size: 55px; 
-   
 }
+
