@@ -8,15 +8,6 @@
   }
 
 
-.profile-info {
-    display: flex;
-    align-items: center;
-  }
-  .name {
-    margin-left: 10px; 
-    font-weight: bold;
-  }
-
 .reviews-header {
     display: flex;
     justify-content: flex-end;
@@ -65,7 +56,16 @@
     overflow: hidden; 
     font-family: 'Merriweather', serif;
     font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, transform 0.1s ease-in;
 }
+
+.reviewContainer:hover {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
 
 .popup-overlay {
     position: fixed;
