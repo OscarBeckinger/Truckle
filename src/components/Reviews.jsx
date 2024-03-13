@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./review-box.css";
-
 const Reviews = ({ name, profilePhoto, title, stars, review }) => {
   const [isOpen, setIsOpen] = useState(false);
 

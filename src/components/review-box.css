@@ -1,3 +1,12 @@
+.profile-info {
+    display: flex;
+    align-items: center;
+  }
+  .name {
+    margin-left: 10px; 
+    font-weight: bold;
+  }
+
 
 .profile-info {
     display: flex;
@@ -11,12 +20,14 @@
 .reviews-header {
     display: flex;
     justify-content: flex-end;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 20px;
 }
 
 .scroll-buttons {
     display: flex;
+    align-items: right;
     align-items: right;
 }
 
@@ -43,6 +54,7 @@
 
 .reviewContainer {
     flex: 0 0 auto; 
+    display: flex;
     display: flex;
     width: 300px; 
     margin-right: 20px; 
