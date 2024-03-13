@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./review-box.css";
 
 const Reviews = ({ name, profilePhoto, title, stars, review }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [truncatedReview, setTruncatedReview] = useState('');
 
   const renderStars = () => {
     const starIcons = [];
@@ -20,6 +21,19 @@ const Reviews = ({ name, profilePhoto, title, stars, review }) => {
     setIsOpen(!isOpen);
   };
 
+  const truncateReviewText = (text) => {
+    if(text.length > 50) {
+      return text.slice(0, 50) + '...';
+    }
+    else {
+      return text;
+    }
+  };
+
+  useEffect(() => {
+    setTruncatedReview(truncateReviewText(review));
+  }, [review]);
+
   return (
     <div className="review-container" onClick={togglePopup}>
       <div className="profile-info">
@@ -30,7 +44,7 @@ const Reviews = ({ name, profilePhoto, title, stars, review }) => {
       </div>
       <h3>{title}</h3>
       <div className="stars">{renderStars()}</div>
-      <p>{review}</p>
+      <p>{truncatedReview}</p>
 
       {isOpen && (
         <div className="popup-overlay">
