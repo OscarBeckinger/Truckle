@@ -44,6 +44,21 @@ echo "Installing Firebase Function dependencies..."
 yarn install
 
 cd .. 
+
+#get API keys from user
+read -p "Please enter Firebase API Key: " fb_api_key
+read -p "Please enter Algolia Admin Key: " algolia_admin_key
+read -p "Please enter Algolia App ID (not super private but better that its not public): " algolia_app_id
+
+
+echo "Creating file to hold API Keys (don't share this file please)..."
+cd src
+echo "export const fireApiKey = \"$fb_api_key\";" > api.js
+echo "export const algoliaAdminKey = \"$algolia_admin_key\";" >> api.js
+echo "export const algoliaAppID = \"$algolia_app_id\";" >> api.js
+
+cd ..
+
 #echo $PWD
 echo "Starting React project..."
 yarn start
