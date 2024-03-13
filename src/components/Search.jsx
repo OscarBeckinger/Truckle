@@ -36,21 +36,17 @@ const Search = () => {
     }
 
     return (
-        <>
-            <div className="background">
+        <div>
+            {searchClient &&
                 <div>
-                    {searchClient &&
-                    <div>
-                        <InstantSearch searchClient={searchClient} indexName="menu_items">
-                            <SearchBox className="test" placeholder="Search Menu Items" searchAsYouType={true}></SearchBox>
-                            <Hits className={hitClasses} hitComponent={Hit}></Hits>
-                        </InstantSearch>
-                    </div>
-                }
+                    <InstantSearch searchClient={searchClient} indexName="menu_items">
+                        <SearchBox className="search-button svg" placeholder="Search Menu Items" searchAsYouType={true} />
+                        <Hits hitComponent={Hit} />
+                    </InstantSearch>
                 </div>
-            </div>
-        </>
+            }
+        </div>
     );
-
 }
-export default Search
+
+export default Search;
