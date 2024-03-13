@@ -12,6 +12,7 @@ import { useGetUserInfo } from '../../hooks/useGetUserInfo';
 import TruckLocations from '../../components/TruckLocations';
 import {handleDeleteFavorites, handleAddFavorites}  from "../../hooks/handleFavorites";
 import { useEffect } from 'react';
+import Footer from '../../components/Footer';
 
 export const Homepage = () => {
     const { addFavorite } = handleAddFavorites();
@@ -113,6 +114,7 @@ export const Homepage = () => {
                              </div>
 
 
+<Footer></Footer>
   
 </>
     );

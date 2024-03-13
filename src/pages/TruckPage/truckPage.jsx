@@ -3,6 +3,7 @@ import ReviewInputBox from "../../components/ReviewInputBox";
 import CombinedMenuItems from "../../components/CombinedMenuItems";
 import { useGetTruckReviews } from "../../hooks/getTruckReviews";
 import Reviews from "../../components/Reviews";
+import Footer from "../../components/Footer";
 import './truckPage.css';
 import Navbar from "../../components/Navbar";
 
@@ -47,6 +48,7 @@ export const TruckPage = (truckName) => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
