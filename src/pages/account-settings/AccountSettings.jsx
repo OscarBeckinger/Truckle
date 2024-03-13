@@ -11,18 +11,15 @@ const AccountSettings = () => {
     <>
     <Navbar></Navbar>
     <div className="background">
-    <div className="banner-account">
-    <img src = {banner} className ="banner"/>
-
-    <div style={styles.container}>
-      
-      <h1 style={styles.heading}>Your Profile</h1>
-      <div style={styles.content}>
-        <EditProfile />
-        
+      <div className="banner-account">
+        <img src = {banner} className ="banner"/>
+        <div style={styles.container}>
+          <h1 style={styles.heading}>Your Profile</h1>
+            <div style={styles.content}>
+              <EditProfile />
+            </div>
+        </div>
       </div>
-    </div>
-    </div>
     </div>
   
     </>
@@ -34,8 +31,7 @@ const styles = {
     maxWidth: '800px',
     margin: '0 auto',
     padding: '25px',
-    fontFamily: 'Arial, sans-serif',
-    
+    fontFamily: 'Merriweather, sans-serif', 
   },
   heading: {
     fontSize: '28px',
@@ -43,9 +39,6 @@ const styles = {
     textAlign: 'center',
     marginBottom: '10px',
     marginTop: '-20px'
-
-   
-
   },
   content: {
     backgroundColor: '#f9f9f9',
