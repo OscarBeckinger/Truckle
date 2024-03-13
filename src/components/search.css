@@ -9,4 +9,9 @@
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-  }
+}
+
+.background {
+    background-image: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%);
+    min-height: 100vh;
+}
