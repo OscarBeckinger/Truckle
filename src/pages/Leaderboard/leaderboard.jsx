@@ -4,6 +4,7 @@ import './leaderboard.css';
 import trophy from '../Leaderboard/assets/Trophy.png';
 import confetti from 'https://cdn.skypack.dev/canvas-confetti';
 import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 function makeConfetti() {
     confetti({
@@ -42,6 +43,7 @@ export default function Leaderboard() {
                         </div>
                   </div>
             </div>
+            <Footer></Footer>
         </>
     );
 }
