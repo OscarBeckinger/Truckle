@@ -41,7 +41,7 @@ const Search = () => {
                 {searchClient &&
                     <div>
                         <InstantSearch searchClient={searchClient} indexName="menu_items">
-                            <SearchBox className="test" placeholder="Search Menu Items" searchAsYouType={true}></SearchBox>
+                            <SearchBox className="search-button svg" placeholder="Search Menu Items" searchAsYouType={true}></SearchBox>
                             <Hits className={hitClasses} hitComponent={Hit}></Hits>
                         </InstantSearch>
                     </div>

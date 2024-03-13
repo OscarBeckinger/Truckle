@@ -1,12 +1,29 @@
-.test {
+.search-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .ais-SearchBox-input {
+    flex: 1;
+    max-width: calc(100% - 100px);
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-right: 5px;
+}
+
+.background {
+    background-image: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%);
+    min-height: 100vh;
+}
+
+.search-button svg {
+    width: 15px;
+    height: 15px;
+}
+
