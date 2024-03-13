@@ -37,8 +37,9 @@ const Search = () => {
 
     return (
         <>
-            <div>
-                {searchClient &&
+            <div className="background">
+                <div>
+                    {searchClient &&
                     <div>
                         <InstantSearch searchClient={searchClient} indexName="menu_items">
                             <SearchBox className="test" placeholder="Search Menu Items" searchAsYouType={true}></SearchBox>
@@ -46,8 +47,8 @@ const Search = () => {
                         </InstantSearch>
                     </div>
                 }
+                </div>
             </div>
-
         </>
     );
 
