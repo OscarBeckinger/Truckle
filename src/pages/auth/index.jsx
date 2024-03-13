@@ -19,18 +19,23 @@ export const Auth = () => {
     const signInWithGoogle = async () => {
         try {
             const results = await signInWithPopup(auth, provider);
-
-            const authInfo = {
-                userID: results.user.uid,
-                name: results.user.displayName,
-                profilePhoto: results.user.photoURL,
-                isAuth: true,
-                email: results.user.email,
-            };
-            console.log(results.user.email);
-            console.log(results.user.displayName)
-            localStorage.setItem("auth", JSON.stringify(authInfo));
-            navigate("/home-page");
+            if (results.user.email.endsWith('@g.ucla.edu')) { 
+                const authInfo = {
+                    userID: results.user.uid,
+                    name: results.user.displayName,
+                    profilePhoto: results.user.photoURL,
+                    isAuth: true,
+                    email: results.user.email,
+                };
+                console.log(results.user.email);
+                console.log(results.user.displayName)
+                localStorage.setItem("auth", JSON.stringify(authInfo));
+                navigate("/home-page");
+            } else {
+                // Sign out the user if the email domain is not @g.ucla.edu
+                alert("Please use email with @g.ucla.edu domain name. ");
+                await auth.signOut();
+            }
         } catch (error) {
             if (error.code === 'auth/cancelled-popup-request') {
                 // User cancelled the sign-in process
