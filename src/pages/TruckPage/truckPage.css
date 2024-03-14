@@ -3,19 +3,6 @@
 .page-container {
     min-height: 100vh;
 }
- /*
-.background {
-    background: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%);
-    min-height: 100vh;
-    position: absolute;
-    z-index: -1;
-}
-*/
-
-.content-container {
-    background-color: white;
-    padding: 20px;
-}
  
 .center {
     display: flex;
@@ -26,7 +13,8 @@
     color: black;
     font-size: 55px;
 }
- 
+
+/*
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -61,3 +49,4 @@
     cursor: pointer;
     font-size: 1.5em;
 }
+*/
