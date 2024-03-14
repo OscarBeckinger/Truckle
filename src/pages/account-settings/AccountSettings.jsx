@@ -4,6 +4,7 @@ import './account-settings.css';
 import banner from '../auth/assets/accountPage.png';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import './account-settings.css';
 // This is the Account Settings page, it displays eveyrthing related to you acc information:
 // name, email, all your reviews
 // AccountSettings has child views such as EditProfile
@@ -15,7 +16,7 @@ const AccountSettings = () => {
       <div className="banner-account">
         <img src = {banner} className ="banner"/>
         <div style={styles.container}>
-          <h1 style={styles.heading}>Your Profile</h1>
+          
             <div style={styles.content}>
               <EditProfile />
             </div>
@@ -30,7 +31,7 @@ const AccountSettings = () => {
 const styles = {
   container: {
     maxWidth: '800px',
-    margin: '0 auto',
+    margin: '-100px auto 0 auto',
     padding: '25px',
     fontFamily: 'Merriweather, sans-serif', 
   },
