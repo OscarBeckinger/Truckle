@@ -18,7 +18,7 @@ const CombinedMenuItems = ({ assocTruck }) => {
                             return (
                                 <div key={index} className="container-list">
                                     <li>
-                                        <div className="container">
+                                        <div className="menu-container">
                                             <MenuItem imageurl={imageurl} title={title} description={description}></MenuItem> 
                                         </div>
                                     </li>
