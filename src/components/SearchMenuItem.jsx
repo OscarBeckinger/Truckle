@@ -13,7 +13,7 @@ const SearchMenuItem = ({ hit }) => {
                <p>{hit.description}</p>
                <p className="truck-p">Food Truck: {hit.associatedTruck}</p>
             </div>
-            <div className="space"></div>
+            <div className="search-space"></div>
         </div>
         </>
    );
