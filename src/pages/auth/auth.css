@@ -1,22 +1,16 @@
 /* auth.css */ 
 
-
-body {
-    font-family: Georgia, serif; /* Set body font to Georgia */
-    font-size: 12px; /* Set body font size to 12 */
-}
-
 .auth-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-
     background: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%); /* blue ombre background */
-}
-
-.google-login-button {
+ }
+ 
+ 
+ .google-login-button {
     background-color: #ffffff; /* Button background color */
     color: #333333; /* Button text color */
     padding: 10px 20px; /* Button padding */
@@ -25,132 +19,145 @@ body {
     border: none; /* No button border */
     border-radius: 5px; /* Add border radius */
     cursor: pointer; /* Change cursor to pointer on hover */
-    outline: none; 
+    outline: none;
     transition: background-color 0.3s ease; /* Smooth transition */
-    position: relative; 
+    position: relative;
     bottom: -35%;
     left: 0%;
     transform: translate (-50%,0%);
     z-index: 2147483647;
-}
-
-.google-login-button:hover {
+ }
+ 
+ 
+ .google-login-button:hover {
     background-color: #e0e0e0; /* Change button background color on hover */
-}
-
-.auth-page p {
+ }
+ 
+ 
+ .auth-page p {
     color: #ffffff; /* Text color */
     font-size: 18px; /* Font size */
     margin-bottom: 20px; /* Bottom margin */
-    position: relative; 
+    position: relative;
     bottom: -35%;
     left: 0%;
     transform: translate (-50%,50%);
-}
-
-@keyframes shake {
+ }
+ 
+ 
+ @keyframes shake {
     0% { transform: translate(-3px, -3px); }
     25% { transform: translate(3px, 3px); }
     50% { transform: translate(-3px, -3px); }
     75% { transform: translate(3px, 3px); }
     100% { transform: translate(-3px, -3px); }
-}
-/*animation to shake diagonally in the other way*/
-@keyframes shake-other {
+ }
+ /*animation to shake diagonally in the other way*/
+ @keyframes shake-other {
     0% { transform: translate(3px, -3px); }
     25% { transform: translate(-3px, 3px); }
     50% { transform: translate(3px, -3px); }
     75% { transform: translate(-3px, 3px); }
     100% { transform: translate(3px, -3px); }
-}
-
-.images-d {
+ }
+ 
+ 
+ .images-d {
     width: 20%;
     height: auto;
-}
-
-/*individual food classes */
-.acaiBowl {
+ }
+ 
+ 
+ /*individual food classes */
+ .acaiBowl {
     position: absolute;
     top: 0%;
     bottom: 100%;
     right: 10%;
     left: -2%;
     animation: shake 1.3s ease infinite;
-}
-
-.burger {
+ }
+ 
+ 
+ .burger {
     position: absolute;
     top: 75%;
     bottom: 15%;
     right: -40%;
     left: 63%;
     animation: shake 1.3s ease infinite;
-}
-
-.bulgogiRice {
+ }
+ 
+ 
+ .bulgogiRice {
     position: absolute;
     top: 60%;
     bottom: 40%;
     right: -60%;
     left: 80%;
     animation: shake-other 1.3s ease infinite;
-}
-
-.donuts {
+ }
+ 
+ 
+ .donuts {
     position: absolute;
     top: 25%;
     bottom: 80%;
     right: 5%;
     left: 15%;
     animation: shake 1.3s ease infinite;
-}
-
-.iceCream {
+ }
+ 
+ 
+ .iceCream {
     position: absolute;
     top: 80%;
     bottom: 50%;
     right: 10%;
     left: 20%;
     animation: shake-other 1.3s ease infinite;
-}
-
-.mangoRice {
+ }
+ 
+ 
+ .mangoRice {
     position: absolute;
     top: 50%;
     bottom: 20%;
     right: 10%;
     left: 3%;
     animation: shake 1.3s ease infinite;
-}
-
-.mangoSmoothie {
+ }
+ 
+ 
+ .mangoSmoothie {
     position: absolute;
     top: 0%;
     bottom: 100%;
     right: -70%;
     left: 85%;
     animation: shake-other 1.3s ease infinite;
-}
-
-.taco {
+ }
+ 
+ 
+ .taco {
     position: absolute;
     top: 20%;
     bottom: 80%;
     right: -50%;
     left: 70%;
     animation: shake 1.3s ease infinite;
-}
-
-.truckle-logo {
+ }
+ 
+ 
+ .truckle-logo {
     position: absolute;
     top: 45%;
     left: 55%;
     transform: translate(-50%, -50%);
  }
- 
  .logo{
     max-width: 85%;
     height: auto;
  }
+ 
  
