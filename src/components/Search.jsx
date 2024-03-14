@@ -1,9 +1,22 @@
 import algoliasearch from "algoliasearch";
 import { useState, useEffect } from "react";
 import { InstantSearch, SearchBox, Hits, Highlight } from "react-instantsearch";
+import { useInstantSearch } from "react-instantsearch";
 import SearchMenuItem from "./SearchMenuItem";
 import { algoliaAppID } from "../api";
 import "./search.css";
+
+function Status() {
+    const { status } = useInstantSearch();
+    console.log("STATUS: ", status);
+    if (status == "error") {
+        alert("Algolia API Error. Please try to re-enter keys in setup script and if that doesn't work give Algolia a few minutes. Thanks!");
+        return <>STATUS.. {status}</>;
+    }
+    else {
+        return;
+    }
+}
 
 const Search = () => {
     
@@ -24,24 +37,17 @@ const Search = () => {
 
     return (
         <div> 
-            {searchClient &&
-                <div>
-                    <InstantSearch searchClient={searchClient} indexName="menu_items">
-                        <SearchBox className="search-button svg" placeholder="Search Menu Items" searchAsYouType={true} />
-                        <div className = 'space'></div>
-                        <Hits hitComponent={Hit} />
-                       
-
-                    </InstantSearch>   
-                
-                   
-                </div>
-             
-            }
+        {searchClient && (
+            <div>
+                <InstantSearch searchClient={searchClient} indexName="menu_items">
+                    <Status></Status>
+                    <SearchBox className="search-button svg" placeholder="Search Menu Items" searchAsYouType={true} />
+                    <Hits hitComponent={Hit} />
+                </InstantSearch>
+            </div>
+        )}
            
-        </div>
-         
-       
+        </div>         
         
     );
 }
