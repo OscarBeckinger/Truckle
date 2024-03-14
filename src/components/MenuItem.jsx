@@ -7,7 +7,7 @@ const MenuItem = ({ imageurl, title, description }) => {
       
            <img src={imageurl} alt="menu item" height="100" width="100" />
            <h2>{title}</h2>        
-           <p>{description}</p>
+           <p className="menu-description">{description}</p>
        </>
    );
 }
