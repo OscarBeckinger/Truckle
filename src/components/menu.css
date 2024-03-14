@@ -1,76 +1,75 @@
-/* menu.css */ 
-
-
+/* menu.css */
 
 .menupage {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  
-
-.heading {
-    display: flex; 
-    justify-content: center; 
-    font-size: 25px;
-    color: rgb(0, 0, 0); 
-    margin-top: 50px;
-    height: 5;
-    text-align: center;
-    padding-bottom: 80px;
-
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+ 
+.heading {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  margin-top: 50px;
+  height: 5;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
 .container-list {
-    display: flex; 
-    justify-content: space-around; 
-    flex-wrap: wrap;
-    padding: 25px; 
-  }
-
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+ 
 .container {
-    border-radius: 20px;
-    width:  250px;
-    height: 280px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1;
-    z-index: 9999;
+  position: relative;
+  border-radius: 20px;
+  width:  250px;
+  height: auto;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, transform 0.1s ease-in;
+}
  
-   
-  }
-  
-  .container img {
-  
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    width: 100%;
-    height: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .container h2 {
-    margin: 10px 20px;
-    text-align: center;
-  }
-  
-  .container p {
-    margin: 0 20px 20px;
-    text-align: center;
-    max-width: 260px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  
+.container:hover {
+   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+}
 
-  
-  
+.container img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
  
+.container h2 {
+  margin: 10px 20px;
+  text-align: center;
+}
+ 
+.container p {
+  position: absolute;
+  bottom: 0; /* Align text to the bottom */
+  left: 0; /* Align text to the left */
+  width: 100%; /* Occupy full width */
+  padding: 10px;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  max-width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Display ellipsis for overflow text */
+  white-space: normal;
+}
