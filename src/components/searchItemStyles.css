@@ -1,23 +1,29 @@
-.container-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 10px;
+.slist {
+  width: 70vw;
+  z-index: 1;
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 20px; 
+  padding-top: 20px; 
+  padding-bottom: 20px;
+  justify-content: center;
+  align-content: center;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-.search-container {
+.search-item-container {
   border-radius: 20px;
   width:  250px;
-  height: 280px;
+  height: auto;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-
 }
 
-.search-container img {
+.search-item-container img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 100%;
@@ -27,12 +33,12 @@
   background-size: cover;
 }
 
-.search-container h2 {
+.search-item-container h2 {
   margin: 10px 20px;
   text-align: center;
 }
 
-.search-container p {
+.search-item-container p {
   margin: 0px;
   text-align: center;
   max-width: 260px;
@@ -43,4 +49,8 @@
 
 .truck-p {
   font-weight: bold;
+}
+
+.space {
+  padding-top: 10px;
 }

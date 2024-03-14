@@ -1,13 +1,21 @@
 //import CombinedMenuItems from "../../components/CombinedMenuItems";
+import React from "react";
 import Search from "../../components/Search";
 import TruckLocations from "../../components/TruckLocations";
 
 import "./styles.css";
+
 export const Searchpage = () => {
     return (
-        <>
-            <Search></Search>
-            <div height={100}></div>
-        </>
+        <div className="scontainer">
+            <Navbar />
+            <div className="background"> 
+                <div className="scontent">
+                    <Search />
+                    <div style={{ minHeight: "100px" }}></div>
+                </div>
+            </div>
+            <Footer />
+        </div>
     );
 }
