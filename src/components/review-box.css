@@ -96,3 +96,11 @@
   max-width: 100%;
   overflow-wrap: break-word;
 }
+.deleteButton {
+  top: 10px; /* Adjust as needed */
+  right: 50px; /* Adjust as needed to create space between name and trash can */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
