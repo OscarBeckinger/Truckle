@@ -1,39 +1,32 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Merriweather, sans-serif;
-  }
-  
-  .heading {
-    font-size: 28px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: -50px;
-  }
-  
-  .content {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: -50px;
-  }
+/* account-setting.css */
 
-  .banner-account {
-    position: absolute;
-    top: 30%;
-    bottom: -10%;
-    left: 50%;
-    right: -20%;
-    transform: translate(-50%, -50%);
-  }
+.banner-account {
+  position: absolute;
+  top: 20%;
+  left: 39%;
+  transform: translate(-50%, -50%);
+}
 
-  .banner {
-    max-width: 500%;
-    height: auto;
+.banner {
+  max-width: 500%;
+  height: auto;
+}
 
-  }
+.edit-profile-container {
+  position: absolute; 
+  max-width: 60%;
+  height: auto;
+  font-family: Merriweather, sans-serif;
+  top: 35%;
+  left: 20%;
+  transform: translate (-50%,0%);
+}
+
+.edit-profile-content {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
  
-  
