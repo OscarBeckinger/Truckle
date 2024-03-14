@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import ReviewInputBox from "../../components/ReviewInputBox";
 import CombinedMenuItems from "../../components/CombinedMenuItems";
 import { useGetTruckReviews } from "../../hooks/getTruckReviews";
@@ -16,12 +16,6 @@ export const TruckPage = (truckName) => {
             behavior: "smooth" 
         });
     };
-    useEffect(() => {
-        document.body.style.background = "linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%)";
-        return () => {
-            document.body.style.background = null;
-        };
-    }, []);
 
     return (
         <>

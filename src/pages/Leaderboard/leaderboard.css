@@ -26,7 +26,6 @@
 .board .leaderboard {
     padding-top: 250px;
     margin-bottom: 1em;
-    z-index: 2147483647;
 }
 
 .board .duration {
@@ -105,7 +104,6 @@
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2147483647; 
 }
 
 .rank-button {
