@@ -1,26 +1,30 @@
 .slist {
-  width: 70vw;
-  z-index: 1;
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-  gap: 20px; 
-  padding-top: 20px; 
-  padding-bottom: 20px;
-  justify-content: center;
-  align-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 25px;
 }
 
 .search-item-container {
+  position: relative;
   border-radius: 20px;
   width:  250px;
   height: auto;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in, transform 0.1s ease-in;
   background-color: white;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.search-item-container:hover {
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .search-item-container img {
@@ -38,19 +42,10 @@
   text-align: center;
 }
 
-.search-item-container p {
-  margin: 0px;
-  text-align: center;
-  max-width: 260px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .truck-p {
   font-weight: bold;
 }
 
-.space {
+.search-space {
   padding-top: 10px;
 }
