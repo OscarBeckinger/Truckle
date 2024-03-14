@@ -4,7 +4,6 @@ import CombinedMenuItems from "../../components/CombinedMenuItems";
 import { useGetTruckReviews } from "../../hooks/getTruckReviews";
 import Reviews from "../../components/Reviews";
 import './truckPage.css';
-import Navbar from "../../components/Navbar";
 
 
 export const TruckPage = (truckName) => {

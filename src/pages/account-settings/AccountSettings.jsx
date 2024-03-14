@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
 import EditProfile from '../../components/EditProfile';
 import banner from '../auth/assets/accountPage.png';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import './account-settings.css';
 import { useGetUserInfo } from "../../hooks/useGetUserInfo";
 import { useGetUserReviews } from "../../hooks/useGetUserReviews";

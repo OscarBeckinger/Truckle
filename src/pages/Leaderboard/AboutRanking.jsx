@@ -2,8 +2,7 @@
 
 import React from 'react';
 import './AboutRanking.css';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
+
 
 function AboutRanking() {
   return (
