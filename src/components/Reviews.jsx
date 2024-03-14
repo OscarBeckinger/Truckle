@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./review-box.css";
+import { doc, deleteDoc } from "firebase/firestore";
+import { db } from "../config/firebase-config";
 
-const Reviews = ({ name, profilePhoto, title, stars, review }) => {
+const Reviews = ({ name, profilePhoto, title, stars, review, AccountSettings }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [truncatedReview, setTruncatedReview] = useState('');
 
@@ -30,6 +32,20 @@ const Reviews = ({ name, profilePhoto, title, stars, review }) => {
     }
   };
 
+  const handleDeleteReview = async (index, e) => {
+    e.stopPropagation(); // Prevent event propagation
+    // Display a confirmation dialog
+    const confirmed = window.confirm("Are you sure you want to delete this review?");
+
+    // If the user confirms deletion, proceed with deletion
+    if (confirmed) {
+      deleteDoc(doc(db, "reviews", index));
+    } else {
+      // Do nothing if the user cancels
+      // alert("Deletion cancelled.");
+    }
+  };
+
   useEffect(() => {
     setTruncatedReview(truncateReviewText(review));
   }, [review]);
@@ -41,11 +57,15 @@ const Reviews = ({ name, profilePhoto, title, stars, review }) => {
           <img src={profilePhoto} alt="profile" height="50" width="50" />
         </div>
         <div className="name">{name}</div>
+        {AccountSettings ? (
+  <button onClick={(e) => handleDeleteReview(AccountSettings, e)} className="deleteButton">
+    &#x1F5D1; {/* Unicode for trash can icon */}
+  </button>
+) : null}
       </div>
       <h3>{title}</h3>
       <div className="stars">{renderStars()}</div>
       <p>{truncatedReview}</p>
-
       {isOpen && (
         <div className="popup-overlay">
           <div className="popup-content">
