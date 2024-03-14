@@ -37,9 +37,12 @@ export const Auth = () => {
                 await auth.signOut();
             }
         } catch (error) {
-            if (error.code === 'auth/cancelled-popup-request') {
-                // User cancelled the sign-in process
+            if (error.code === 'auth/cancelled-popup-request' || error.code === 'auth/popup-closed-by-user') {
+                //console.log("ERROR: ", error);
                 console.log('User cancelled the sign-in process');
+            } else {
+                //console.log("ERROR: ", error);
+                alert("Firebase API Error, Please try rerunning the Set Up Script:     (./set_up.sh) you may have entered the API key incorrectly. If this Error Presists then Firebase might be down, wait a couple minutes and it should be fine.");
             }
         };
     };
