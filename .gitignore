@@ -17,6 +17,7 @@
 #firebase-config.js
 api.js
 api*
+/functions/callableFunctions/config.js
 
 # misc
 .DS_Store
