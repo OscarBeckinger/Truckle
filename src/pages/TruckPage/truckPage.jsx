@@ -4,7 +4,6 @@ import CombinedMenuItems from "../../components/CombinedMenuItems";
 import { useGetTruckReviews } from "../../hooks/getTruckReviews";
 import Reviews from "../../components/Reviews";
 import './truckPage.css';
-import Navbar from "../../components/Navbar";
 
 
 export const TruckPage = (truckName) => {
@@ -20,7 +19,6 @@ export const TruckPage = (truckName) => {
 
     return (
         <>
-            <Navbar></Navbar>
             <div className="center">
                 <h1 className="menu-title">{truckName}</h1>
             </div>

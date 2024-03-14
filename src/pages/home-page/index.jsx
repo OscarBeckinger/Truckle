@@ -1,6 +1,5 @@
 import { useGetTrucks } from '../../hooks/useGetTrucks';
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../../components/Navbar';
 import home from '../home-page/assets/TrucklyImageSmall.png';
 import move from '../home-page/assets/movingTruck.png';
 import { CiStar } from "react-icons/ci";
@@ -12,7 +11,7 @@ import { useGetUserInfo } from '../../hooks/useGetUserInfo';
 import TruckLocations from '../../components/TruckLocations';
 import {handleDeleteFavorites, handleAddFavorites}  from "../../hooks/handleFavorites";
 import { useEffect } from 'react';
-import Footer from '../../components/Footer';
+
 
 
 export const Homepage = () => {
@@ -76,12 +75,11 @@ export const Homepage = () => {
 
    return (
 <>
- <Navbar />
- <div className="homepage">
-   <div className="truckle-home">
-     <img src={home} className="home" />
-   </div>
-
+           
+<div className="homepage">
+    <div className="truckle-home">
+        <img src = {home} className ="home"/>
+    </div>
 
    <div class="background-top"></div>
    <div class="background-bottom"></div>
@@ -120,7 +118,7 @@ export const Homepage = () => {
  </div>
 
 
- <Footer />
+
 </>
 
 

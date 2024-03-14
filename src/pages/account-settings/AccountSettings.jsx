@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
 import EditProfile from '../../components/EditProfile';
 import banner from '../auth/assets/accountPage.png';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
 import './account-settings.css';
 import { useGetUserInfo } from "../../hooks/useGetUserInfo";
 import { useGetUserReviews } from "../../hooks/useGetUserReviews";
@@ -27,7 +25,7 @@ const AccountSettings = () => {
   };
   return (
     <>
-    <Navbar></Navbar>
+    <div className='Main'> 
     <div className='profile'>
       <div className='avatar' >
         <div className='avatar-wrapper'>
@@ -37,7 +35,6 @@ const AccountSettings = () => {
       <div className="body">
       <h3>Name: {name} </h3>
       <h3>Email: {email} </h3>
-      <h3> Your Favorites: </h3>
       </div> 
     </div>
     <h1 className="reviewsTitle" > {userReviews.length > 0 ? `Total Reviews: ${userReviews.length}` : "No Reviews"}</h1>
@@ -50,7 +47,7 @@ const AccountSettings = () => {
                     );
                 })}
             </div>
-    <Footer></Footer>
+            </div>
     </>
   );
 };
