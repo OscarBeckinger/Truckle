@@ -23,6 +23,7 @@
 .navbar .rightSide {
   flex: 50%;
   height: 100%;
+  padding-left: 150px;
   display: flex;
   align-items: center;
   justify-content: center;

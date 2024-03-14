@@ -12,7 +12,7 @@ export default function Footer() {
         </Link>*/}
         <ul>
             <a href="https://github.com/OscarBeckinger/truckle" target="_blank" rel="noopener noreferrer">
-            <FaGithub size="3em"/>
+            <FaGithub className="github" size="2em"/>
             </a>
         </ul>
       </nav>
