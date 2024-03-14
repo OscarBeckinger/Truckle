@@ -34,14 +34,14 @@ function Navbar() {
         <Link to="/home-page"> Home </Link>
         <Link to="/Search"> Search </Link>
         <Link to="/LeaderBoard"> Leaderboard </Link>
-        <Link to="/AccountSettings"> AccountSettings </Link>
+        <Link to="/AccountSettings"> Account Settings </Link>
         </div>
       </div>
       <div className="rightSide">
       <Link to="/home-page"> Home </Link>
         <Link to="/Search"> Search </Link>
         <Link to="/LeaderBoard"> Leaderboard </Link>
-        <Link to="/AccountSettings"> AccountSettings </Link>
+        <Link to="/AccountSettings"> Account Settings </Link>
         <button onClick={toggleNavbar}>
           <ReorderIcon />
         </button>

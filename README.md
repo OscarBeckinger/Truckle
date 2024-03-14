@@ -1,24 +1,13 @@
 ## Getting Started
 
-Before running the application, ensure you have Node.js and npm (Node Package Manager) installed. You can install Node.js from [here](https://nodejs.org/).
+Before running the application, ensure you have Node.js. You can install Node.js from [here](https://nodejs.org/).
 
-If you don't have npm installed, you can install it by following the instructions provided on the [npm website](https://www.npmjs.com/get-npm).
+Please install yarn (if you prefer to install it with npm and you don't have yarn installed already the set up script will ask if you want to install yarn with npm).
 
-Once you have Node.js and npm installed, you can proceed with the following steps:
-
-1. Install dependencies by running the following command in your terminal:
+1. Run the set up script to set up project (Install dependancies, Initalize API Keys, and Start the Application).
 
 ```bash
-npm install
-```
-Or if your prefer yarn:
-```
-yarn install
-```
-2. Run the development server:
-
-```bash
-yarn start
+./set_up.sh
 ```
 
--Open [http://localhost:3000](http://localhost:3000) with a browser to see the app.
+The set up script will install needed dependancies using yarn, prompt you to enter API keys, and then start the application.

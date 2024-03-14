@@ -141,6 +141,7 @@ const handleStarClick = (index, e, associatedTruck) => {
        })}
         </div>
               </div>
+        <div className='spacing'></div>
     </>
   );
 };

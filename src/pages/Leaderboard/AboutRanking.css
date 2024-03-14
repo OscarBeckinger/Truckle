@@ -1,5 +1,21 @@
 /* AboutRanking.css */
 
+.graphs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.small-image {
+    width: 700px; 
+    height: auto;
+    margin: 10px; 
+  } 
+
+.graphTitle {
+    padding-top: 75px;
+}
+
 #profile {
     margin: 0;
     padding: 0;
