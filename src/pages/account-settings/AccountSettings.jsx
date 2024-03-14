@@ -9,7 +9,6 @@ import { db } from "../../config/firebase-config";
 import Reviews from "../../components/Reviews";
 import '../../components/review-box.css'
 import { useGetFavorites } from '../../hooks/useGetFavorites';
-// import '../home-page/homepage.css'
 import { useGetTrucks } from '../../hooks/useGetTrucks';
 import { CiStar } from "react-icons/ci";
 import { useNavigate } from 'react-router-dom';

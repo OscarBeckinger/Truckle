@@ -24,7 +24,7 @@
 }
 
 .board .leaderboard {
-    padding-top: 200px;
+    padding-top: 250px;
     margin-bottom: 1em;
     z-index: 2147483647;
 }
@@ -105,8 +105,7 @@
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 2147483647; /* Ensure the header is above other content */
-    font-size: 18px; /* Button font size */
+    z-index: 2147483647; 
 }
 
 .rank-button {
