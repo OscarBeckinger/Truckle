@@ -27,7 +27,7 @@ const AccountSettings = () => {
   };
   return (
     <>
-    <Navbar></Navbar>
+    <div className='Main'> 
     <div className='profile'>
       <div className='avatar' >
         <div className='avatar-wrapper'>
@@ -37,7 +37,6 @@ const AccountSettings = () => {
       <div className="body">
       <h3>Name: {name} </h3>
       <h3>Email: {email} </h3>
-      <h3> Your Favorites: </h3>
       </div> 
     </div>
     <h1 className="reviewsTitle" > {userReviews.length > 0 ? `Total Reviews: ${userReviews.length}` : "No Reviews"}</h1>
@@ -50,7 +49,7 @@ const AccountSettings = () => {
                     );
                 })}
             </div>
-    <Footer></Footer>
+            </div>
     </>
   );
 };

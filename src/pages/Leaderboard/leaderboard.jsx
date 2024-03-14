@@ -34,7 +34,6 @@ export default function Leaderboard() {
 
       return (
         <>
-        <Navbar></Navbar>
             <div className="background">
                   <div className="App" id="main">
                   <Board />
@@ -43,7 +42,6 @@ export default function Leaderboard() {
                         </div>
                   </div>
             </div>
-            <Footer></Footer>
         </>
     );
 }

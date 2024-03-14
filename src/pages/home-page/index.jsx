@@ -73,7 +73,6 @@ export const Homepage = () => {
 
     return (
 <>
-            <Navbar></Navbar>
            
 <div className="homepage">
     <div className="truckle-home">
@@ -114,7 +113,6 @@ export const Homepage = () => {
                              </div>
 
 
-<Footer></Footer>
   
 </>
     );

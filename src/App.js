@@ -6,13 +6,14 @@ import { Searchpage } from "./pages/search-page";
 import AccountSettings from "./pages/account-settings/AccountSettings";
 import LeaderBoard from "./pages/Leaderboard/leaderboard";
 import AboutRanking from "./pages/Leaderboard/AboutRanking";
-
-// found weird glitch: if type pagen, it blank screen cause not valid path, if i say page to rever back to actual pack throws error cannot read properties of null (readin 'title'); I think because its a default, does not know how to work with no data. 
-
+import Navbar from '../src/components/Navbar';
+import Footer from '../src/components/Footer';
+import { useLocation } from "react-router-dom";
 function App() {
   return (
     <div className="App">
       <Router>
+        <NavbarWithConditionalRendering /> 
         <Routes>
           <Route path="/" exact element={< Auth />} />
           <Route path="/home-page" element={< Homepage />} />
@@ -27,10 +28,33 @@ function App() {
           <Route path="/AboutRanking" element={<AboutRanking />} /> {/* Add this route */}
           <Route path="/Search" element={<Searchpage />} />
         </Routes>
+        <FooterbarWithConditionalRendering />
       </Router>
 
     </div>
   );
 }
+
+function NavbarWithConditionalRendering() {
+  const location = useLocation();
+  const pathsWithoutNavbar = ["/"]; // Add paths here that shouldn't render the Navbar
+  if (pathsWithoutNavbar.includes(location.pathname)) {
+    return null;
+  } else {
+    return <Navbar />;
+  }
+}
+
+function FooterbarWithConditionalRendering() {
+  const location = useLocation();
+  const pathsWithoutNavbar = ["/"]; // Add paths here that shouldn't render the Navbar
+  if (pathsWithoutNavbar.includes(location.pathname)) {
+    return null;
+  } else {
+    return <Footer />;
+  }
+}
+
+
 
 export default App;

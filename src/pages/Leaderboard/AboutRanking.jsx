@@ -8,7 +8,6 @@ import Footer from '../../components/Footer';
 function AboutRanking() {
   return (
     <>
-    <Navbar></Navbar>
     <div id="profile">
       <h2 >How We Rank Food Trucks</h2>
       <p >
@@ -18,7 +17,6 @@ function AboutRanking() {
         In the future, we plan to incorporate additional information and criteria for ranking food trucks, providing a more comprehensive and accurate ranking system.
       </p>
     </div>
-    <Footer></Footer>
     </>
   );
 }
