@@ -21,5 +21,19 @@
     margin-top: -50px;
   }
 
+  .banner-account {
+    position: absolute;
+    top: 30%;
+    bottom: -10%;
+    left: 50%;
+    right: -20%;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner {
+    max-width: 500%;
+    height: auto;
+
+  }
  
   
