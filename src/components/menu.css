@@ -27,7 +27,7 @@
   padding: 25px;
 }
  
-.container {
+.menu-container {
   position: relative;
   border-radius: 20px;
   width:  250px;
@@ -41,11 +41,11 @@
   transition: background-color 0.3s ease-in, transform 0.1s ease-in;
 }
  
-.container:hover {
+.menu-container:hover {
    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-.container img {
+.menu-container img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 100%;
@@ -55,12 +55,12 @@
   background-size: cover;
 }
  
-.container h2 {
+.menu-container h2 {
   margin: 10px 20px;
   text-align: center;
 }
  
-.container p {
+.menu-description p {
   position: absolute;
   bottom: 0; /* Align text to the bottom */
   left: 0; /* Align text to the left */

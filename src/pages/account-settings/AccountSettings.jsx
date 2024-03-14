@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import EditProfile from '../../components/EditProfile';
-import './account-settings.css';
 import banner from '../auth/assets/accountPage.png';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -13,21 +12,7 @@ import Reviews from "../../components/Reviews";
 import '../../components/review-box.css'
 
 
-// This is the Account Settings page, it displays eveyrthing related to you acc information:
-// name, email, all your reviews
-// AccountSettings has child views such as EditProfile
 
-    {/* <div className="background"> */}
-      {/* <div className="banner-account"> */}
-        {/* <img src = {banner} className ="banner"/> */}
-        {/* <div style={styles.container}> */}
-          
-      //   <div style={styles.content}>
-      //   <EditProfile />
-      // </div>
-  {/* </div> */}
-{/* </div> */}
-{/* </div> */}
 
 const AccountSettings = () => {
   const { name, profilePhoto, email } = useGetUserInfo();
@@ -70,3 +55,4 @@ const AccountSettings = () => {
   );
 };
 export default AccountSettings;
+
