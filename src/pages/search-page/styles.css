@@ -6,3 +6,22 @@
     margin: 0;
 }*/
 
+.scontainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.background {
+    flex: 1;
+    width: 100%;
+    background: linear-gradient(to bottom right, #93dfec 0%, #0078b7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scontent {
+    padding-top: 10px;
+    text-align: center;
+}

@@ -28,6 +28,7 @@ const Search = () => {
                 <div>
                     <InstantSearch searchClient={searchClient} indexName="menu_items">
                         <SearchBox className="search-button svg" placeholder="Search Menu Items" searchAsYouType={true} />
+                        <div className = 'space'></div>
                         <Hits hitComponent={Hit} />
                        
 
