@@ -1,4 +1,4 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./navbar.css";
 import React, { useState, useEffect } from 'react';
 import Logo from "../pages/auth/assets/Title.png";
