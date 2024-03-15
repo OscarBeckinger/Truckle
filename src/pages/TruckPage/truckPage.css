@@ -10,8 +10,12 @@
 }
  
 .menu-title {
-    color: black;
+    color: white;
+    text-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     font-size: 55px;
+    background-color:  #87cef4;
+    width: 100vw;
+    text-align: center;
 }
 
 /*
@@ -50,3 +54,6 @@
     font-size: 1.5em;
 }
 */
+
+
+
