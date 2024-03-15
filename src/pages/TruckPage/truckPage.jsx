@@ -19,11 +19,8 @@ export const TruckPage = (truckName) => {
 
     return (
         <>
-           
             <div className="center">
-            <div className="p-background">
                 <h1 className="menu-title">{truckName}</h1>
-            </div>
             </div>
             <CombinedMenuItems assocTruck={truckName}></CombinedMenuItems>
             <ReviewInputBox associatedTruck={truckName}></ReviewInputBox>
@@ -44,7 +41,6 @@ export const TruckPage = (truckName) => {
                     );
                 })}
             </div>
-       
         </>
     );
 };
