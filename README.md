@@ -1,5 +1,5 @@
 # Truckle
-#<img src="./src/pages/auth/assets/TruckleImage.png" width=30px> Truckle <img src="./src/pages/auth/assets/TruckleImage.png.svg" width=30px>
+# <img src="./src/pages/auth/assets/TruckleImage.png" width=60px> Truckle <img src="./src/pages/auth/assets/TruckleImage.png" width=60px>
 
 ## Table of Contents
 - [Setup](https://github.com/OscarBeckinger/truckle/#setup)
