@@ -16,7 +16,7 @@ import { useEffect } from 'react';
 import {handleDeleteFavorites, handleAddFavorites}  from "../../hooks/handleFavorites";
 
 const AccountSettings = () => {
-  const { name, profilePhoto, email, userID} = useGetUserInfo();
+  const { name, profilePhoto, email, userID, creationDate} = useGetUserInfo();
   const { userReviews } = useGetUserReviews();  
   const containerRef = useRef(null);
   const {userFavorites} = useGetFavorites(userID);
@@ -24,7 +24,12 @@ const AccountSettings = () => {
   const { addFavorite } = handleAddFavorites();
   const navigate = useNavigate();
   const [clickedIcons, setClickedIcons] = useState(Array(trucks.length).fill(false));
-
+  const dateObject = new Date(creationDate);
+  const year = dateObject.getFullYear();
+  const month = dateObject.toLocaleString('default', { month: 'long' }); // 'long' gives the full name of the month
+  
+  console.log("Year:", year);
+  console.log("Month:", month);
 
   let filteredTrucks = []
 
@@ -111,8 +116,10 @@ const handleStarClick = (index, e, associatedTruck) => {
       <div className="body">
       <h3>Name: {name} </h3>
       <h3>Email: {email} </h3>
+      <h3>Account Since {month} {year}</h3>
       </div> 
     </div>
+    <h1 className="reviewsTitle">{userReviews.length > 0 ? `Total Reviews ${userReviews.length}` : "Reviews: No reviews currently!"}</h1>
      <div className="reviews-container" ref={containerRef}>
                 {userReviews.map((review, index) => {
                     return (
@@ -123,7 +130,8 @@ const handleStarClick = (index, e, associatedTruck) => {
                 })}
         </div>
         <h1 className="reviewsTitle">{filteredTrucks.length > 0 ? "My Favorites" : "Favorites: No favorites currently!"}</h1>
-            <div className="menuList"> 
+        <div className="menuList"> 
+       
               {filteredTrucks.map((truck, index) => {
          const { description, imageurl, title, navStr } = truck;
          return (
@@ -139,7 +147,7 @@ const handleStarClick = (index, e, associatedTruck) => {
            </div>
          );
        })}
-        </div>
+         </div> 
               </div>
         <div className='spacing'></div>
     </>
