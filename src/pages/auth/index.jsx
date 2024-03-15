@@ -26,6 +26,7 @@ export const Auth = () => {
                     profilePhoto: results.user.photoURL,
                     isAuth: true,
                     email: results.user.email,
+                    creationDate: results.user.metadata.creationTime, 
                 };
                 console.log(results.user.email);
                 console.log(results.user.displayName)
