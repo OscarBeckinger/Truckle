@@ -15,7 +15,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease-in, transform 0.1s ease-in;
   background-color: white;
@@ -40,6 +40,7 @@
 .search-item-container h2 {
   margin: 10px 20px;
   text-align: center;
+  flex: 1;
 }
 
 .truck-p {
