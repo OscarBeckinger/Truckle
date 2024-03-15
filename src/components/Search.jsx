@@ -1,6 +1,6 @@
 import algoliasearch from "algoliasearch";
 import { useState, useEffect } from "react";
-import { InstantSearch, SearchBox, Hits, Highlight } from "react-instantsearch";
+import { InstantSearch, SearchBox, Hits } from "react-instantsearch";
 import { useInstantSearch } from "react-instantsearch";
 import SearchMenuItem from "./SearchMenuItem";
 import { algoliaAppID } from "../api";
@@ -9,9 +9,15 @@ import "./search.css";
 function Status() {
     const { status } = useInstantSearch();
     console.log("STATUS: ", status);
-    if (status == "error") {
+    if (status === "error") {
         alert("Algolia API Error. Please try to re-enter keys in setup script and if that doesn't work give Algolia a few minutes. Thanks!");
-        return <>STATUS.. {status}</>;
+        return (
+            <>
+                <h1>STATUS: {status}. </h1>
+                <h1>Please try to rerun start up script and enter API keys.</h1>
+                <h1>If that doesn't work Algolia might be down, please wait a couple minutes and try again.</h1>
+            </>
+        );
     }
     else {
         return;
@@ -28,7 +34,6 @@ const Search = () => {
     const Hit = ({ hit }) => {
         return (
             <div>
-                 
                 <SearchMenuItem hit={hit}></SearchMenuItem>
             </div>
           
@@ -46,9 +51,7 @@ const Search = () => {
                 </InstantSearch>
             </div>
         )}
-           
         </div>         
-        
     );
 }
 

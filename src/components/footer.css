@@ -3,7 +3,7 @@
   .footer {
     width: 100%;
     height: 60px;
-    background-color: #121619;
+    background-color: #fafa6a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
   }
   
   .footer p {
-    color: white;
+    color: black;
   }
 
   .github {

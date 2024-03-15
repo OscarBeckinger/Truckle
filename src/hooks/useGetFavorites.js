@@ -1,9 +1,8 @@
 import { db } from "../config/firebase-config";
 import { useState, useEffect } from "react";
 import { collection, query, where, onSnapshot } from "firebase/firestore";
-import { useGetUserInfo } from "./useGetUserInfo";
 export const useGetFavorites = (userID) => {
-    const reviewsCollectionRef = collection(db, "favorites");
+    //const reviewsCollectionRef = collection(db, "favorites");
     const [userFavorites, setuserFavorites] = useState([]);
 
     useEffect(() => {

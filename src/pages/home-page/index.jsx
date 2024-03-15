@@ -4,7 +4,6 @@ import home from '../home-page/assets/TrucklyImageSmall.png';
 import move from '../home-page/assets/movingTruck.png';
 import { CiStar } from "react-icons/ci";
 import './homepage.css';
-import {Fa} from "react-icons/fa";
 import { useState } from "react";
 import { useGetFavorites } from '../../hooks/useGetFavorites';
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
@@ -78,7 +77,7 @@ export const Homepage = () => {
            
 <div className="homepage">
     <div className="truckle-home">
-        <img src = {home} className ="home"/>
+        <img src = {home} className ="home" alt="hometruck"/>
     </div>
 
    <div class="background-top"></div>
@@ -113,7 +112,7 @@ export const Homepage = () => {
 
    <div className="truck">
      <div class="move-truck"></div>
-     <img src={move} className="move" />
+     <img src={move} className="move" alt="movingtruck"/>
    </div>
  </div>
 

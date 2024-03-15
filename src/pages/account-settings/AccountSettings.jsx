@@ -1,11 +1,9 @@
 import React, { useState, useRef } from 'react';
-import EditProfile from '../../components/EditProfile';
-import banner from '../auth/assets/accountPage.png';
+//import EditProfile from '../../components/EditProfile';
+//import banner from '../auth/assets/accountPage.png';
 import './account-settings.css';
 import { useGetUserInfo } from "../../hooks/useGetUserInfo";
 import { useGetUserReviews } from "../../hooks/useGetUserReviews";
-import { doc, deleteDoc } from "firebase/firestore";
-import { db } from "../../config/firebase-config";
 import Reviews from "../../components/Reviews";
 import '../../components/review-box.css'
 import { useGetFavorites } from '../../hooks/useGetFavorites';
@@ -34,14 +32,11 @@ const AccountSettings = () => {
   let filteredTrucks = []
 
   const listOfNames = userFavorites.map(obj => obj.associatedTruck);
-  // console.log("NAMES :", listOfNames);
   for (let i = 0; i < trucks.length; i++) {
-    // console.log("Title: ", trucks[i].title, " fav : ", listOfNames);
     if (listOfNames.includes(trucks[i].title)) {
       filteredTrucks.push(trucks[i]);
     }
   }
-  // console.log("filtered!", filteredTrucks);
 
   const scrollTo = (scrollOffset) => {
       containerRef.current.scrollTo({

@@ -53,7 +53,7 @@ export const Auth = () => {
             <button className="google-login-button" onClick={signInWithGoogle}>Sign In With Google</button>
             
             <div className="truckle-logo">
-               <img src = {logo} className ="logo"/>
+               <img src = {logo} className ="logo" alt="logo"/>
 
 
            </div>
