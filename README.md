@@ -4,7 +4,7 @@
 - [Setup](https://github.com/OscarBeckinger/truckle/#setup)
 - [Features](https://github.com/OscarBeckinger/truckle/#features)
 - [Authors](https://github.com/OscarBeckinger/truckle/#authors)
-- [Images](https://github.com/OscarBeckinger/truckle/#images)
+- [Images](https://github.com/OscarBeckinger/truckle/#homepage)
 
 ## Setup
 1. Please install yarn. If you prefer to install it with npm and you don't have yarn installed already the set up script will ask if you want to install yarn with npm. If prompted to it will do so for you.
