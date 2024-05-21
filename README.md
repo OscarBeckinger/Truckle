@@ -28,3 +28,17 @@ Please run this script from the root directory of the project (truckle).
 **Truckle** was created by a group of UCLA students   
 **Truckle Team:** Oscar Beckinger, Landan Devenecia, Rudaba Sarwar, Rutvi Shah, Joaquin Cruz
 
+##Images
+
+**Homepage** 
+<img width="1468" alt="homepage1" src="https://github.com/OscarBeckinger/truckle/assets/144488958/da12794e-bc70-42e5-bec7-9532d1a8f888">
+<img width="1468" alt="homepage2" src="https://github.com/OscarBeckinger/truckle/assets/144488958/64cc4e81-95d1-4745-9c8d-1a331023fe8e">
+
+
+**Settings Page**
+<img width="1468" alt="a_truckle" src="https://github.com/OscarBeckinger/truckle/assets/144488958/a24a6c14-9d92-408d-b6ad-1ad0582d5e8c">
+
+
+
+
+
